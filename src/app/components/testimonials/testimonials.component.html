@@ -1,0 +1,74 @@
+<div class="testimonials section">
+  <div class="testimonials-bg">
+    <div class="t-glow"></div>
+  </div>
+
+  <div class="container">
+    <!-- Header -->
+    <div class="t-header" scrollReveal>
+      <span class="section-label">{{ 'testimonials.label' | translate }}</span>
+      <h2 class="section-title">
+        {{ 'testimonials.title_1' | translate }}<br>
+        <span>{{ 'testimonials.title_2' | translate }}</span>
+      </h2>
+    </div>
+
+    <!-- Slider -->
+    <div class="t-slider" scrollReveal [style.transitionDelay]="'0.2s'">
+      <!-- Track -->
+      <div class="t-track">
+        @for (t of testimonials; track t.nameKey; let i = $index) {
+          <div
+            class="t-card card-glass"
+            [class.active]="i === activeIndex"
+            [class.prev]="i === (activeIndex - 1 + testimonials.length) % testimonials.length"
+            [class.next]="i === (activeIndex + 1) % testimonials.length"
+          >
+            <!-- Quote mark -->
+            <div class="t-quote">&ldquo;</div>
+
+            <!-- Stars -->
+            <div class="t-stars">
+              @for (star of stars; track $index) {
+                <span class="material-symbols-rounded star">star</span>
+              }
+            </div>
+
+            <!-- Text -->
+            <p class="t-text">{{ t.textKey | translate }}</p>
+
+            <!-- Author -->
+            <div class="t-author">
+              <div class="t-avatar">{{ t.initials }}</div>
+              <div class="t-info">
+                <strong class="t-name">{{ t.nameKey | translate }}</strong>
+                <span class="t-role">{{ t.roleKey | translate }}</span>
+              </div>
+            </div>
+          </div>
+        }
+      </div>
+
+      <!-- Controls -->
+      <div class="t-controls">
+        <button class="t-arrow t-arrow--prev" (click)="prev()">
+          <span class="material-symbols-rounded">arrow_back</span>
+        </button>
+
+        <div class="t-dots">
+          @for (t of testimonials; track t.nameKey; let i = $index) {
+            <button
+              class="t-dot"
+              [class.active]="i === activeIndex"
+              (click)="goTo(i)"
+            ></button>
+          }
+        </div>
+
+        <button class="t-arrow t-arrow--next" (click)="next()">
+          <span class="material-symbols-rounded">arrow_forward</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

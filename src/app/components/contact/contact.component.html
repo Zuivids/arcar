@@ -1,0 +1,145 @@
+<div class="contact section">
+  <div class="contact-bg">
+    <div class="c-glow c-glow--left"></div>
+    <div class="c-glow c-glow--right"></div>
+  </div>
+
+  <div class="container">
+    <div class="contact-grid">
+      <!-- Left: Info -->
+      <div class="contact-info" scrollReveal>
+        <span class="section-label">{{ 'contact.label' | translate }}</span>
+        <h2 class="section-title">
+          {{ 'contact.title_1' | translate }}<br>
+          <span>{{ 'contact.title_2' | translate }}</span>
+        </h2>
+        <p class="section-subtitle">{{ 'contact.subtitle' | translate }}</p>
+
+        <div class="info-items">
+          <!-- Phone -->
+          <a class="info-item" href="tel:+37128000000">
+            <div class="info-icon-wrap">
+              <span class="material-symbols-rounded">phone</span>
+            </div>
+            <div class="info-body">
+              <span class="info-label">{{ 'contact.phone_label' | translate }}</span>
+              <span class="info-value">{{ 'contact.phone' | translate }}</span>
+            </div>
+          </a>
+
+          <!-- Email -->
+          <a class="info-item" href="mailto:info@arcar.lv">
+            <div class="info-icon-wrap">
+              <span class="material-symbols-rounded">mail</span>
+            </div>
+            <div class="info-body">
+              <span class="info-label">{{ 'contact.email_label' | translate }}</span>
+              <span class="info-value">{{ 'contact.email' | translate }}</span>
+            </div>
+          </a>
+
+          <!-- Address -->
+          <div class="info-item">
+            <div class="info-icon-wrap">
+              <span class="material-symbols-rounded">location_on</span>
+            </div>
+            <div class="info-body">
+              <span class="info-label">{{ 'contact.address_label' | translate }}</span>
+              <span class="info-value">{{ 'contact.address' | translate }}</span>
+            </div>
+          </div>
+
+          <!-- Hours -->
+          <div class="info-item">
+            <div class="info-icon-wrap">
+              <span class="material-symbols-rounded">schedule</span>
+            </div>
+            <div class="info-body">
+              <span class="info-label">{{ 'contact.hours_title' | translate }}</span>
+              <span class="info-value">{{ 'contact.hours1' | translate }}</span>
+              <span class="info-value">{{ 'contact.hours2' | translate }}</span>
+              <span class="info-value muted">{{ 'contact.hours3' | translate }}</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Map Placeholder -->
+        <div class="map-placeholder">
+          <span class="material-symbols-rounded map-icon">map</span>
+          <span>{{ 'contact.map_placeholder' | translate }}</span>
+        </div>
+      </div>
+
+      <!-- Right: Form -->
+      <div class="contact-form-wrap" scrollReveal [style.transitionDelay]="'0.2s'">
+        @if (success) {
+          <div class="form-success card-glass">
+            <span class="material-symbols-rounded success-icon">check_circle</span>
+            <p>{{ 'contact.form_success' | translate }}</p>
+          </div>
+        } @else {
+          <form class="contact-form card-glass" [formGroup]="form" (ngSubmit)="onSubmit()">
+            <div class="form-row">
+              <div class="form-group" [class.has-error]="hasError('name')">
+                <label class="form-label">{{ 'contact.form_name' | translate }}</label>
+                <input
+                  class="form-input"
+                  type="text"
+                  formControlName="name"
+                  [placeholder]="'contact.form_name' | translate"
+                />
+                @if (hasError('name')) {
+                  <span class="form-error">{{ 'contact.form_name_req' | translate }}</span>
+                }
+              </div>
+
+              <div class="form-group" [class.has-error]="hasError('phone')">
+                <label class="form-label">{{ 'contact.form_phone' | translate }}</label>
+                <input
+                  class="form-input"
+                  type="tel"
+                  formControlName="phone"
+                  [placeholder]="'contact.form_phone' | translate"
+                />
+                @if (hasError('phone')) {
+                  <span class="form-error">{{ 'contact.form_phone_req' | translate }}</span>
+                }
+              </div>
+            </div>
+
+            <div class="form-group" [class.has-error]="hasError('email')">
+              <label class="form-label">{{ 'contact.form_email' | translate }}</label>
+              <input
+                class="form-input"
+                type="email"
+                formControlName="email"
+                [placeholder]="'contact.form_email' | translate"
+              />
+              @if (hasError('email')) {
+                <span class="form-error">{{ 'contact.form_email_req' | translate }}</span>
+              }
+            </div>
+
+            <div class="form-group" [class.has-error]="hasError('message')">
+              <label class="form-label">{{ 'contact.form_message' | translate }}</label>
+              <textarea
+                class="form-input form-textarea"
+                formControlName="message"
+                rows="5"
+                [placeholder]="'contact.form_message' | translate"
+              ></textarea>
+              @if (hasError('message')) {
+                <span class="form-error">{{ 'contact.form_message_req' | translate }}</span>
+              }
+            </div>
+
+            <button type="submit" class="btn-primary form-submit">
+              {{ 'contact.form_submit' | translate }}
+              <span class="material-symbols-rounded">send</span>
+            </button>
+          </form>
+        }
+      </div>
+    </div>
+  </div>
+</div>

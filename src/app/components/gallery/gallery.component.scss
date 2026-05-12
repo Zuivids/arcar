@@ -1,0 +1,102 @@
+.gallery {
+  background: var(--bg-secondary);
+}
+
+// ─── Header ──────────────────────────────────────
+.gallery-header {
+  margin-bottom: 60px;
+}
+
+// ─── Grid ─────────────────────────────────────────
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 260px 260px;
+  gap: 12px;
+
+  @media (max-width: 900px) {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+  }
+
+  @media (max-width: 600px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+// ─── Item ─────────────────────────────────────────
+.gallery-item {
+  position: relative;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform var(--transition);
+
+  &.wide {
+    grid-column: span 2;
+    @media (max-width: 900px) { grid-column: span 1; }
+  }
+
+  &:hover {
+    transform: scale(1.01);
+    .item-hover-overlay { opacity: 1; }
+    .item-overlay { opacity: 0; }
+  }
+}
+
+// Gradient themes
+.g1 { background: linear-gradient(135deg, #0d0503 0%, #2a0d00 40%, #0d0503 100%); }
+.g2 { background: linear-gradient(145deg, #070a0d 0%, #001020 50%, #070a0d 100%); }
+.g3 { background: linear-gradient(135deg, #0d0a03 0%, #201500 50%, #0d0a03 100%); }
+.g4 { background: linear-gradient(135deg, #050d0a 0%, #002015 50%, #050d0a 100%); }
+.g5 { background: linear-gradient(145deg, #0a0505 0%, #200a00 50%, #0a0505 100%); }
+.g6 { background: linear-gradient(135deg, #0d0507 0%, #280010 40%, #0d0507 100%); }
+
+// Default overlay with label
+.item-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, transparent 60%);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+  padding: 24px;
+  gap: 8px;
+  transition: opacity var(--transition);
+
+  .item-icon {
+    font-size: 32px;
+    color: rgba(255, 107, 0, 0.5);
+    font-variation-settings: 'FILL' 0, 'wght' 200, 'GRAD' 0, 'opsz' 32;
+  }
+
+  .item-label {
+    font-family: var(--font-heading);
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--color-secondary);
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+}
+
+// Hover overlay
+.item-hover-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 107, 0, 0.08);
+  border: 1px solid var(--border-accent);
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity var(--transition);
+
+  .item-hover-icon {
+    font-size: 40px;
+    color: var(--accent);
+    font-variation-settings: 'FILL' 0, 'wght' 200, 'GRAD' 0, 'opsz' 40;
+  }
+}

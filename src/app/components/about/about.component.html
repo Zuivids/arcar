@@ -1,0 +1,51 @@
+<div class="about section">
+  <!-- Background accent -->
+  <div class="about-bg-accent"></div>
+
+  <div class="container">
+    <div class="about-grid">
+      <!-- Left: Content -->
+      <div class="about-content">
+        <div scrollReveal>
+          <span class="section-label">{{ 'about.label' | translate }}</span>
+          <h2 class="section-title">
+            {{ 'about.title_1' | translate }}<br>
+            <span>{{ 'about.title_2' | translate }}</span>
+          </h2>
+          <div class="divider"></div>
+        </div>
+
+        <p class="about-text" scrollReveal [style.transitionDelay]="'0.15s'">
+          {{ 'about.p1' | translate }}
+        </p>
+        <p class="about-text" scrollReveal [style.transitionDelay]="'0.25s'">
+          {{ 'about.p2' | translate }}
+        </p>
+
+        <div class="about-actions" scrollReveal [style.transitionDelay]="'0.35s'">
+          <button class="btn-primary" (click)="scrollTo('contact')">
+            {{ 'about.cta' | translate }}
+            <span class="material-symbols-rounded">arrow_forward</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Right: Stats -->
+      <div class="about-stats">
+        @for (stat of stats; track stat.valueKey; let i = $index) {
+          <div class="stat-card card-glass" scrollReveal [style.transitionDelay]="(i * 0.15) + 's'">
+            <div class="stat-value">{{ stat.valueKey | translate }}</div>
+            <div class="stat-label">{{ stat.labelKey | translate }}</div>
+            <div class="stat-line"></div>
+          </div>
+        }
+
+        <!-- Decorative element -->
+        <div class="about-deco" scrollReveal [style.transitionDelay]="'0.5s'">
+          <div class="deco-ring"></div>
+          <span class="material-symbols-rounded deco-icon">workspace_premium</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

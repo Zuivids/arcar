@@ -1,0 +1,74 @@
+<nav class="navbar" [class.scrolled]="scrolled" [class.menu-open]="menuOpen">
+  <div class="nav-inner container">
+
+    <!-- Logo -->
+    <div class="nav-logo" (click)="scrollTo('home')">
+      <span class="logo-ar">AR</span><span class="logo-car">CAR</span>
+      <span class="logo-dot"></span>
+    </div>
+
+    <!-- Desktop Links -->
+    <ul class="nav-links">
+      @for (link of navLinks; track link.id) {
+        <li>
+          <button class="nav-link" (click)="scrollTo(link.id)">
+            {{ link.key | translate }}
+          </button>
+        </li>
+      }
+    </ul>
+
+    <!-- Right side -->
+    <div class="nav-actions">
+      <!-- Language Toggle -->
+      <div class="lang-toggle">
+        <button
+          class="lang-btn"
+          [class.active]="langSvc.currentLang() === 'lv'"
+          (click)="langSvc.setLang('lv')"
+        >LV</button>
+        <span class="lang-divider"></span>
+        <button
+          class="lang-btn"
+          [class.active]="langSvc.currentLang() === 'ru'"
+          (click)="langSvc.setLang('ru')"
+        >RU</button>
+      </div>
+
+      <!-- CTA -->
+      <button class="nav-cta btn-primary" (click)="scrollTo('contact')">
+        {{ 'nav.book' | translate }}
+      </button>
+
+      <!-- Hamburger -->
+      <button class="hamburger" (click)="toggleMenu()" [class.open]="menuOpen" aria-label="Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" [class.open]="menuOpen">
+    <ul class="mobile-links">
+      @for (link of navLinks; track link.id) {
+        <li>
+          <button class="mobile-link" (click)="scrollTo(link.id)">
+            {{ link.key | translate }}
+          </button>
+        </li>
+      }
+    </ul>
+    <div class="mobile-actions">
+      <div class="lang-toggle">
+        <button class="lang-btn" [class.active]="langSvc.currentLang() === 'lv'" (click)="langSvc.setLang('lv')">LV</button>
+        <span class="lang-divider"></span>
+        <button class="lang-btn" [class.active]="langSvc.currentLang() === 'ru'" (click)="langSvc.setLang('ru')">RU</button>
+      </div>
+      <button class="btn-primary mobile-cta" (click)="scrollTo('contact')">
+        {{ 'nav.book' | translate }}
+      </button>
+    </div>
+  </div>
+</nav>

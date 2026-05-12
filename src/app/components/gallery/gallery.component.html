@@ -1,0 +1,28 @@
+<div class="gallery section">
+  <div class="container">
+    <!-- Header -->
+    <div class="gallery-header" scrollReveal>
+      <span class="section-label">{{ 'gallery.label' | translate }}</span>
+      <h2 class="section-title">
+        {{ 'gallery.title_1' | translate }}<br>
+        <span>{{ 'gallery.title_2' | translate }}</span>
+      </h2>
+      <p class="section-subtitle">{{ 'gallery.subtitle' | translate }}</p>
+    </div>
+
+    <!-- Grid -->
+    <div class="gallery-grid" scrollReveal [style.transitionDelay]="'0.2s'">
+      @for (item of items; track item.labelKey; let i = $index) {
+        <div class="gallery-item {{ item.gradient }} {{ item.size }}">
+          <div class="item-overlay">
+            <span class="material-symbols-rounded item-icon">{{ item.icon }}</span>
+            <span class="item-label">{{ item.labelKey | translate }}</span>
+          </div>
+          <div class="item-hover-overlay">
+            <span class="material-symbols-rounded item-hover-icon">zoom_in</span>
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+</div>

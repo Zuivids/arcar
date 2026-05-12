@@ -1,0 +1,195 @@
+.footer {
+  background: var(--bg-secondary);
+  border-top: 1px solid var(--border);
+  position: relative;
+}
+
+.footer-top-line {
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--accent), transparent);
+  opacity: 0.4;
+}
+
+// ─── Grid ─────────────────────────────────────────
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr 1.2fr 1.2fr;
+  gap: 60px;
+  padding: 80px 0 60px;
+
+  @media (max-width: 1024px) { grid-template-columns: 1fr 1fr; gap: 40px; }
+  @media (max-width: 600px)  { grid-template-columns: 1fr; gap: 36px; padding: 56px 0 40px; }
+}
+
+// ─── Brand ───────────────────────────────────────
+.footer-brand {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  cursor: default;
+
+  .logo-ar,
+  .logo-car {
+    font-family: var(--font-heading);
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: 0.06em;
+  }
+
+  .logo-ar  { color: var(--color-primary); }
+  .logo-car { color: var(--accent); }
+}
+
+.footer-tagline {
+  font-size: 13px;
+  color: var(--color-muted);
+  line-height: 1.6;
+  max-width: 260px;
+}
+
+// ─── Socials ─────────────────────────────────────
+.footer-socials {
+  display: flex;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.social-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+  background: var(--bg-glass);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-muted);
+  transition: all var(--transition);
+  cursor: pointer;
+
+  &:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+    background: rgba(255, 107, 0, 0.08);
+    box-shadow: 0 4px 20px var(--accent-glow);
+  }
+}
+
+// ─── Columns ─────────────────────────────────────
+.footer-col {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.footer-col-title {
+  font-family: var(--font-heading);
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-primary);
+}
+
+.footer-links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-link {
+  background: none;
+  border: none;
+  color: var(--color-muted);
+  font-family: var(--font-body);
+  font-size: 13px;
+  cursor: pointer;
+  padding: 0;
+  text-align: left;
+  transition: color var(--transition);
+
+  &:hover { color: var(--accent); }
+
+  &--text {
+    cursor: default;
+    &:hover { color: var(--color-muted); }
+  }
+}
+
+// Contact list
+.footer-contact-list { gap: 14px; }
+
+.footer-contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  color: var(--color-muted);
+  font-size: 13px;
+
+  a {
+    color: var(--color-muted);
+    transition: color var(--transition);
+    &:hover { color: var(--accent); }
+  }
+}
+
+.fc-icon {
+  font-size: 16px;
+  color: var(--accent);
+  flex-shrink: 0;
+  margin-top: 1px;
+  font-variation-settings: 'FILL' 0, 'wght' 200, 'GRAD' 0, 'opsz' 16;
+}
+
+// ─── Bottom Bar ──────────────────────────────────
+.footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px 0 32px;
+  border-top: 1px solid var(--border);
+  gap: 16px;
+  flex-wrap: wrap;
+
+  @media (max-width: 600px) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+.footer-copy {
+  font-size: 12px;
+  color: var(--color-muted);
+}
+
+.footer-legal {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.footer-legal-link {
+  background: none;
+  border: none;
+  font-family: var(--font-body);
+  font-size: 12px;
+  color: var(--color-muted);
+  cursor: pointer;
+  transition: color var(--transition);
+  padding: 0;
+
+  &:hover { color: var(--accent); }
+}
+
+.footer-legal-sep {
+  width: 1px;
+  height: 12px;
+  background: var(--border);
+}
