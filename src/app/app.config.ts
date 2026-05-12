@@ -1,15 +1,13 @@
-import { ApplicationConfig, importProvidersFrom, provideZoneChangeDetection } from '@angular/core';
+import { ApplicationConfig, provideZoneChangeDetection } from '@angular/core';
 import { provideHttpClient } from '@angular/common/http';
-import { TranslateModule } from '@ngx-translate/core';
+import { provideTranslateService } from '@ngx-translate/core';
 import { provideTranslateHttpLoader } from '@ngx-translate/http-loader';
 
 export const appConfig: ApplicationConfig = {
   providers: [
     provideZoneChangeDetection({ eventCoalescing: true }),
     provideHttpClient(),
+    provideTranslateService({ defaultLanguage: 'lv' }),
     ...provideTranslateHttpLoader({ prefix: '/i18n/', suffix: '.json' }),
-    importProvidersFrom(
-      TranslateModule.forRoot({ defaultLanguage: 'lv' })
-    ),
   ],
 };
