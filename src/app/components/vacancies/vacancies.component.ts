@@ -3,13 +3,13 @@ import { TranslateModule } from '@ngx-translate/core';
 import { ScrollRevealDirective } from '../../directives/scroll-reveal.directive';
 
 @Component({
-  selector: 'app-about',
+  selector: 'app-vacancies',
   standalone: true,
   imports: [TranslateModule, ScrollRevealDirective],
-  templateUrl: './about.component.html',
-  styleUrl: './about.component.scss',
+  templateUrl: './vacancies.component.html',
+  styleUrl: './vacancies.component.scss',
 })
-export class AboutComponent {
+export class VacanciesComponent {
   scrollTo(id: string): void {
     const el = document.getElementById(id);
     if (el) {

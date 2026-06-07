@@ -1,0 +1,62 @@
+.vacancies {
+  background: var(--bg-secondary);
+  position: relative;
+  overflow: hidden;
+}
+
+.vacancies-bg {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 15% 20%, rgba(255, 107, 0, 0.1) 0%, transparent 45%),
+    radial-gradient(circle at 85% 80%, rgba(255, 107, 0, 0.08) 0%, transparent 40%);
+}
+
+.vacancies-wrap {
+  padding: 54px 48px;
+
+  .section-title { margin-bottom: 14px; }
+  .section-subtitle {
+    max-width: 760px;
+    margin-bottom: 28px;
+  }
+
+  @media (max-width: 700px) {
+    padding: 36px 24px;
+  }
+}
+
+.vacancies-points {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+
+.vacancy-point {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--color-secondary);
+  font-size: 14px;
+  line-height: 1.6;
+
+  .material-symbols-rounded {
+    color: var(--accent);
+    font-size: 18px;
+    font-variation-settings: 'FILL' 0, 'wght' 250, 'GRAD' 0, 'opsz' 20;
+  }
+
+  a {
+    color: var(--color-primary);
+    text-decoration: none;
+
+    &:hover {
+      color: var(--accent);
+    }
+  }
+}
+
+.vacancies-actions {
+  margin-top: 26px;
+}

@@ -5,6 +5,7 @@ import { HeroComponent } from './components/hero/hero.component';
 import { AboutComponent } from './components/about/about.component';
 import { ServicesComponent } from './components/services/services.component';
 import { WhyUsComponent } from './components/why-us/why-us.component';
+import { VacanciesComponent } from './components/vacancies/vacancies.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { FooterComponent } from './components/footer/footer.component';
 
@@ -18,6 +19,7 @@ import { FooterComponent } from './components/footer/footer.component';
     AboutComponent,
     ServicesComponent,
     WhyUsComponent,
+    VacanciesComponent,
     ContactComponent,
     FooterComponent,
   ],

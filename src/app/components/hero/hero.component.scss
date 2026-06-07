@@ -116,7 +116,7 @@
   position: relative;
   z-index: 1;
   display: grid;
-  grid-template-columns: 1fr auto;
+  grid-template-columns: minmax(320px, 1fr) minmax(380px, 620px);
   align-items: center;
   gap: 80px;
   padding-top: var(--nav-height);
@@ -131,7 +131,39 @@
 
 // ─── Text Block ──────────────────────────────────
 .hero-text {
-  max-width: 720px;
+  max-width: 620px;
+}
+
+.hero-custom-title {
+  font-family: var(--font-heading);
+  font-size: clamp(44px, 6.6vw, 82px);
+  line-height: 0.98;
+  letter-spacing: -0.03em;
+  color: var(--color-primary);
+  margin-bottom: 26px;
+  animation: fadeUp 0.8s ease 0.3s both;
+}
+
+.hero-pricelist {
+  width: 100%;
+  max-width: 620px;
+  justify-self: end;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  border: 1px solid var(--border);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.45);
+  animation: fadeUp 0.8s ease 0.3s both;
+
+  @media (max-width: 1024px) {
+    justify-self: start;
+  }
+
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
 }
 
 .hero-tagline {
@@ -199,7 +231,7 @@
   display: flex;
   align-items: center;
   gap: 16px;
-  margin-bottom: 52px;
+  margin-bottom: 0;
   animation: fadeUp 0.8s ease 1.0s both;
 
   @media (max-width: 500px) {

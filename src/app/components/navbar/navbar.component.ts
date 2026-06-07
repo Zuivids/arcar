@@ -20,6 +20,7 @@ export class NavbarComponent {
     { key: 'nav.about',        id: 'about' },
     { key: 'nav.services',     id: 'services' },
     { key: 'nav.whyus',        id: 'whyus' },
+    { key: 'nav.vacancies',    id: 'vacancies' },
     { key: 'nav.contact',      id: 'contact' },
   ];
 
@@ -32,7 +33,7 @@ export class NavbarComponent {
     this.menuOpen = false;
     const el = document.getElementById(id);
     if (el) {
-      const offset = 80;
+      const offset = window.innerWidth <= 1024 ? 80 : 116;
       const top = el.getBoundingClientRect().top + window.scrollY - offset;
       window.scrollTo({ top, behavior: 'smooth' });
     }

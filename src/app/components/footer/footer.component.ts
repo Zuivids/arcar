@@ -14,7 +14,7 @@ export class FooterComponent {
     { labelKey: 'nav.about',        id: 'about' },
     { labelKey: 'nav.services',     id: 'services' },
     { labelKey: 'nav.whyus',        id: 'whyus' },
-    { labelKey: 'nav.gallery',      id: 'gallery' },
+    { labelKey: 'nav.vacancies',    id: 'vacancies' },
     { labelKey: 'nav.contact',      id: 'contact' },
   ];
 
@@ -26,7 +26,8 @@ export class FooterComponent {
   scrollTo(id: string): void {
     const el = document.getElementById(id);
     if (el) {
-      const top = el.getBoundingClientRect().top + window.scrollY - 80;
+      const offset = window.innerWidth <= 1024 ? 80 : 116;
+      const top = el.getBoundingClientRect().top + window.scrollY - offset;
       window.scrollTo({ top, behavior: 'smooth' });
     }
   }

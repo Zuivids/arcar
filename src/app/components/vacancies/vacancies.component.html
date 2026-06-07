@@ -1,0 +1,36 @@
+<div class="vacancies section">
+  <div class="vacancies-bg"></div>
+
+  <div class="container">
+    <div class="vacancies-wrap card-glass" scrollReveal>
+      <span class="section-label">{{ 'vacancies.label' | translate }}</span>
+      <h2 class="section-title">
+        {{ 'vacancies.title_1' | translate }}<br>
+        <span>{{ 'vacancies.title_2' | translate }}</span>
+      </h2>
+      <p class="section-subtitle">{{ 'vacancies.subtitle' | translate }}</p>
+
+      <div class="vacancies-points">
+        <div class="vacancy-point" scrollReveal [style.transitionDelay]="'0.08s'">
+          <span class="material-symbols-rounded">badge</span>
+          <span>{{ 'vacancies.point_1' | translate }}</span>
+        </div>
+        <div class="vacancy-point" scrollReveal [style.transitionDelay]="'0.16s'">
+          <span class="material-symbols-rounded">groups</span>
+          <span>{{ 'vacancies.point_2' | translate }}</span>
+        </div>
+        <div class="vacancy-point" scrollReveal [style.transitionDelay]="'0.24s'">
+          <span class="material-symbols-rounded">mail</span>
+          <a href="mailto:siaarcar@gmail.com">siaarcar&#64;gmail.com</a>
+        </div>
+      </div>
+
+      <div class="vacancies-actions" scrollReveal [style.transitionDelay]="'0.3s'">
+        <button class="btn-primary" type="button" (click)="scrollTo('contact')">
+          {{ 'vacancies.cta' | translate }}
+          <span class="material-symbols-rounded">send</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
