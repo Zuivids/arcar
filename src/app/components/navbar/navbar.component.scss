@@ -45,10 +45,29 @@
     text-decoration: none;
     transition: color var(--transition);
     white-space: nowrap;
+    cursor: pointer;
+    touch-action: manipulation;
 
     &:hover {
       color: var(--accent);
     }
+
+    svg {
+      width: 14px;
+      height: 14px;
+      fill: currentColor;
+      opacity: 0.9;
+      flex-shrink: 0;
+    }
+  }
+
+  .nav-info-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    color: var(--color-secondary);
+    font-size: 12px;
+    white-space: nowrap;
 
     svg {
       width: 14px;
