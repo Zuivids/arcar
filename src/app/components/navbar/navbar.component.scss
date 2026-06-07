@@ -262,7 +262,6 @@
   background: rgba(5, 5, 5, 0.97);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  border-top: 1px solid var(--border);
   padding: 24px 0 32px;
   max-height: 0;
   overflow: hidden;
@@ -274,6 +273,7 @@
     visibility 0s linear 0.5s;
 
   &.open {
+    border-top: 1px solid var(--border);
     max-height: 600px;
     opacity: 1;
     visibility: visible;
