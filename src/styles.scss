@@ -32,6 +32,12 @@
   --container-max:   1280px;
 }
 
+@media (max-width: 1024px) {
+  :root {
+    --nav-height: 60px;
+  }
+}
+
 // ─── Reset ───────────────────────────────────────
 *, *::before, *::after {
   box-sizing: border-box;

@@ -15,7 +15,7 @@ export class HeroComponent {
   scrollTo(id: string): void {
     const el = document.getElementById(id);
     if (el) {
-      const offset = window.innerWidth <= 1024 ? 80 : 116;
+      const offset = window.innerWidth <= 1024 ? 96 : 116;
       const top = el.getBoundingClientRect().top + window.scrollY - offset;
       window.scrollTo({ top, behavior: 'smooth' });
     }
