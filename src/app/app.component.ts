@@ -5,8 +5,6 @@ import { HeroComponent } from './components/hero/hero.component';
 import { AboutComponent } from './components/about/about.component';
 import { ServicesComponent } from './components/services/services.component';
 import { WhyUsComponent } from './components/why-us/why-us.component';
-import { GalleryComponent } from './components/gallery/gallery.component';
-import { TestimonialsComponent } from './components/testimonials/testimonials.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { FooterComponent } from './components/footer/footer.component';
 
@@ -20,8 +18,6 @@ import { FooterComponent } from './components/footer/footer.component';
     AboutComponent,
     ServicesComponent,
     WhyUsComponent,
-    GalleryComponent,
-    TestimonialsComponent,
     ContactComponent,
     FooterComponent,
   ],

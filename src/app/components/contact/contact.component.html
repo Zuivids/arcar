@@ -6,15 +6,18 @@
 
   <div class="container">
     <div class="contact-grid">
-      <!-- Left: Info -->
-      <div class="contact-info" scrollReveal>
+      <!-- Left: Intro -->
+      <div class="contact-intro" scrollReveal>
         <span class="section-label">{{ 'contact.label' | translate }}</span>
         <h2 class="section-title">
           {{ 'contact.title_1' | translate }}<br>
           <span>{{ 'contact.title_2' | translate }}</span>
         </h2>
         <p class="section-subtitle">{{ 'contact.subtitle' | translate }}</p>
+      </div>
 
+      <!-- Left: Info -->
+      <div class="contact-info" scrollReveal>
         <div class="info-items">
           <!-- Phone -->
           <a class="info-item" href="tel:+37128000000">
@@ -28,7 +31,7 @@
           </a>
 
           <!-- Email -->
-          <a class="info-item" href="mailto:info@arcar.lv">
+          <a class="info-item" href="mailto:siaarcar@gmail.com">
             <div class="info-icon-wrap">
               <span class="material-symbols-rounded">mail</span>
             </div>
@@ -63,10 +66,20 @@
           </div>
         </div>
 
-        <!-- Map Placeholder -->
-        <div class="map-placeholder">
-          <span class="material-symbols-rounded map-icon">map</span>
-          <span>{{ 'contact.map_placeholder' | translate }}</span>
+        <div class="rekviziti card-glass" scrollReveal [style.transitionDelay]="'0.12s'">
+          <h3 class="rekviziti-title">{{ 'contact.rekviziti_title' | translate }}</h3>
+          <div class="rekviziti-body">
+            <p><strong>"AR CAR" SIA</strong></p>
+            <p>Nometnu iela 38 - 2</p>
+            <p>Riga, LV-1002</p>
+            <p><a href="mailto:siaarcar@gmail.com">siaarcar&#64;gmail.com</a></p>
+            <p class="rekviziti-spacer"></p>
+            <p>{{ 'contact.reg_no' | translate }}: 41203049275</p>
+            <p>{{ 'contact.vat_no' | translate }}: LV41203049275</p>
+            <p>{{ 'contact.bank' | translate }}: "Citadele banka" AS</p>
+            <p>{{ 'contact.swift' | translate }}: PARXLV22</p>
+            <p>{{ 'contact.account' | translate }}: LV05PARX0019293620003</p>
+          </div>
         </div>
       </div>
 
@@ -139,6 +152,26 @@
             </button>
           </form>
         }
+
+        <!-- Map -->
+        <div class="map-placeholder map-under-form" scrollReveal [style.transitionDelay]="'0.3s'">
+          <iframe
+            title="Ar Car SIA location"
+            src="https://www.google.com/maps?q=56.9064323,24.2130492&z=16&output=embed"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            allowfullscreen
+          ></iframe>
+          <a
+            class="map-open-link"
+            href="https://www.google.com/maps/place/Ar+Car+SIA/@56.9064323,24.2130492,597m/data=!3m2!1e3!4b1!4m6!3m5!1s0x46eed3d7f6f09c61:0x954ff4f640c2d6f0!8m2!3d56.9064323!4d24.2130492!16s%2Fg%2F11yvcxy9_6?entry=ttu&g_ep=EgoyMDI2MDYwMS4wIKXMDSoASAFQAw%3D%3D"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span class="material-symbols-rounded">open_in_new</span>
+            <span>Open in Google Maps</span>
+          </a>
+        </div>
       </div>
     </div>
   </div>

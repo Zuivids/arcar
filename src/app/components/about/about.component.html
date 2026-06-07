@@ -29,23 +29,6 @@
           </button>
         </div>
       </div>
-
-      <!-- Right: Stats -->
-      <div class="about-stats">
-        @for (stat of stats; track stat.valueKey; let i = $index) {
-          <div class="stat-card card-glass" scrollReveal [style.transitionDelay]="(i * 0.15) + 's'">
-            <div class="stat-value">{{ stat.valueKey | translate }}</div>
-            <div class="stat-label">{{ stat.labelKey | translate }}</div>
-            <div class="stat-line"></div>
-          </div>
-        }
-
-        <!-- Decorative element -->
-        <div class="about-deco" scrollReveal [style.transitionDelay]="'0.5s'">
-          <div class="deco-ring"></div>
-          <span class="material-symbols-rounded deco-icon">workspace_premium</span>
-        </div>
-      </div>
     </div>
   </div>
 </div>

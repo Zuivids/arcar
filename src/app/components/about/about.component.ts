@@ -10,12 +10,6 @@ import { ScrollRevealDirective } from '../../directives/scroll-reveal.directive'
   styleUrl: './about.component.scss',
 })
 export class AboutComponent {
-  stats = [
-    { valueKey: 'about.stat1_value', labelKey: 'about.stat1_label' },
-    { valueKey: 'about.stat2_value', labelKey: 'about.stat2_label' },
-    { valueKey: 'about.stat3_value', labelKey: 'about.stat3_label' },
-  ];
-
   scrollTo(id: string): void {
     const el = document.getElementById(id);
     if (el) {

@@ -20,8 +20,6 @@ export class NavbarComponent {
     { key: 'nav.about',        id: 'about' },
     { key: 'nav.services',     id: 'services' },
     { key: 'nav.whyus',        id: 'whyus' },
-    { key: 'nav.gallery',      id: 'gallery' },
-    { key: 'nav.testimonials', id: 'testimonials' },
     { key: 'nav.contact',      id: 'contact' },
   ];
 
