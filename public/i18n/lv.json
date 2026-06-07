@@ -91,6 +91,7 @@
     "form_message": "Ziņojums / Jautājums",
     "form_submit": "Nosūtīt Pieteikumu",
     "form_success": "Paldies! Mēs ar jums sazināsimies drīzumā.",
+    "form_error": "Kļūda! Lūdzu, mēģiniet vēlreiz vai rakstiet mums tieši uz siaarcar&#64;gmail.com.",
     "form_name_req": "Vārds ir obligāts",
     "form_phone_req": "Tālrunis ir obligāts",
     "form_email_req": "Ievadiet derīgu e-pastu",

@@ -90,6 +90,11 @@
             <span class="material-symbols-rounded success-icon">check_circle</span>
             <p>{{ 'contact.form_success' | translate }}</p>
           </div>
+        } @else if (error) {
+          <div class="form-error-msg card-glass">
+            <span class="material-symbols-rounded error-icon">error</span>
+            <p>{{ 'contact.form_error' | translate }}</p>
+          </div>
         } @else {
           <form class="contact-form card-glass" [formGroup]="form" (ngSubmit)="onSubmit()">
             <div class="form-row">
@@ -146,9 +151,13 @@
               }
             </div>
 
-            <button type="submit" class="btn-primary form-submit">
-              {{ 'contact.form_submit' | translate }}
-              <span class="material-symbols-rounded">send</span>
+            <button type="submit" class="btn-primary form-submit" [disabled]="loading">
+              @if (loading) {
+                <span class="form-spinner"></span>
+              } @else {
+                {{ 'contact.form_submit' | translate }}
+                <span class="material-symbols-rounded">send</span>
+              }
             </button>
           </form>
         }
