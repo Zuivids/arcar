@@ -122,7 +122,7 @@
   padding-top: calc(var(--nav-height) + 36px);
   min-height: 100vh;
 
-  @media (max-width: 1024px) {
+  @media (max-width: 1185px) {
     grid-template-columns: 1fr;
     gap: 60px;
     padding-bottom: 80px;
@@ -154,7 +154,7 @@
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.45);
   animation: fadeUp 0.8s ease 0.3s both;
 
-  @media (max-width: 1024px) {
+  @media (max-width: 1185px) {
     justify-self: start;
   }
 
@@ -315,7 +315,7 @@
   flex-shrink: 0;
   animation: fadeUp 1s ease 0.5s both;
 
-  @media (max-width: 1024px) {
+  @media (max-width: 1185px) {
     display: none;
   }
 }
