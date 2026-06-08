@@ -1,0 +1,271 @@
+<!-- ╔══ HERO ══╗ -->
+<section class="ku-hero">
+  <div class="container ku-hero-inner">
+
+    <div class="ku-hero-content">
+      <div class="ku-badge">
+        <span class="material-symbols-rounded">verified_user</span>
+        {{ 'ku.badge' | translate }}
+      </div>
+      <h1 class="ku-title">
+        {{ 'ku.title_1' | translate }} <span>{{ 'ku.title_2' | translate }}</span> {{ 'ku.title_3' | translate }}
+      </h1>
+      <p class="ku-sub">
+        <strong>{{ 'ku.sub_1' | translate }}</strong> &bull; {{ 'ku.sub_2' | translate }} &bull; <strong>{{ 'ku.sub_3' | translate }}</strong>
+      </p>
+      <div class="ku-actions">
+        <a routerLink="/" fragment="contact" class="btn-primary">
+          <span class="material-symbols-rounded">event_available</span>
+          {{ 'ku.btn_book' | translate }}
+        </a>
+        <a href="#ku-cenas" class="btn-secondary">
+          <span class="material-symbols-rounded">sell</span>
+          {{ 'ku.btn_prices' | translate }}
+        </a>
+      </div>
+    </div>
+
+    <!-- AC Machine SVG Illustration -->
+    <div class="ku-visual" aria-hidden="true">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 520">
+        <defs>
+          <linearGradient id="kuBodyGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#1e1e1e"/>
+            <stop offset="100%" stop-color="#111"/>
+          </linearGradient>
+          <linearGradient id="kuScreenGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" stop-color="#06121f"/>
+            <stop offset="100%" stop-color="#030a14"/>
+          </linearGradient>
+          <radialGradient id="kuBgGlow" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stop-color="#ff6b00" stop-opacity="0.08"/>
+            <stop offset="100%" stop-color="#ff6b00" stop-opacity="0"/>
+          </radialGradient>
+          <filter id="kuGlow" x="-30%" y="-30%" width="160%" height="160%">
+            <feGaussianBlur stdDeviation="2.5" result="blur"/>
+            <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+          </filter>
+        </defs>
+
+        <!-- Ambient glow -->
+        <ellipse cx="200" cy="270" rx="180" ry="220" fill="url(#kuBgGlow)"/>
+
+        <!-- ── Refrigerant canister (left) ── -->
+        <rect x="42" y="155" width="36" height="110" rx="12" fill="#181818" stroke="#282828" stroke-width="1.5"/>
+        <rect x="47" y="143" width="26" height="20" rx="6" fill="#1e1e1e" stroke="#2e2e2e" stroke-width="1"/>
+        <circle cx="60" cy="153" r="5" fill="#2a2a2a" stroke="#3a3a3a" stroke-width="1"/>
+        <rect x="46" y="178" width="24" height="58" rx="4" fill="#0a2a14"/>
+        <text x="58" y="218" text-anchor="middle" fill="#00cc55" font-size="7.5" font-family="monospace" font-weight="bold" transform="rotate(-90,58,208)">R134a</text>
+        <rect x="52" y="139" width="16" height="7" rx="3" fill="#333"/>
+
+        <!-- ── Machine body ── -->
+        <rect x="88" y="78" width="220" height="340" rx="14" fill="url(#kuBodyGrad)" stroke="#252525" stroke-width="1.5"/>
+        <rect x="92" y="82" width="212" height="332" rx="11" fill="none" stroke="#1e1e1e" stroke-width="1"/>
+        <!-- Orange top accent -->
+        <rect x="88" y="78" width="220" height="5" rx="2.5" fill="#ff6b00"/>
+
+        <!-- Corner screws -->
+        <circle cx="100" cy="94"  r="4" fill="#1a1a1a" stroke="#303030" stroke-width="1"/>
+        <circle cx="296" cy="94"  r="4" fill="#1a1a1a" stroke="#303030" stroke-width="1"/>
+        <circle cx="100" cy="404" r="4" fill="#1a1a1a" stroke="#303030" stroke-width="1"/>
+        <circle cx="296" cy="404" r="4" fill="#1a1a1a" stroke="#303030" stroke-width="1"/>
+
+        <!-- LED indicators -->
+        <circle cx="268" cy="94" r="5" fill="#00cc55" filter="url(#kuGlow)"/>
+        <circle cx="280" cy="94" r="5" fill="#ff6b00" filter="url(#kuGlow)"/>
+        <circle cx="292" cy="94" r="5" fill="#ff6b00" opacity=".25"/>
+
+        <!-- ── Screen ── -->
+        <rect x="105" y="100" width="186" height="118" rx="9" fill="url(#kuScreenGrad)" stroke="#0d2a4a" stroke-width="1.5"/>
+        <rect x="108" y="103" width="180" height="112" rx="7" fill="none" stroke="rgba(0,140,255,0.08)" stroke-width="1"/>
+        <text x="198" y="126" text-anchor="middle" fill="#4488cc" font-family="monospace" font-size="9" letter-spacing="2">DIAGNOSTICS</text>
+        <text x="198" y="148" text-anchor="middle" fill="#ff6b00" font-family="monospace" font-size="17" font-weight="bold" filter="url(#kuGlow)">READY</text>
+        <!-- Progress bars -->
+        <text x="118" y="154" fill="#446688" font-size="7" font-family="monospace">VACUUM</text>
+        <text x="278" y="154" text-anchor="end" fill="#4488cc" font-size="7" font-family="monospace">65%</text>
+        <rect x="118" y="158" width="160" height="5" rx="2.5" fill="#0d1e2e"/>
+        <rect x="118" y="158" width="104" height="5" rx="2.5" fill="#0088ff" opacity=".9"/>
+        <text x="118" y="170" fill="#664422" font-size="7" font-family="monospace">REFRIG.</text>
+        <text x="278" y="170" text-anchor="end" fill="#cc5500" font-size="7" font-family="monospace">83%</text>
+        <rect x="118" y="174" width="160" height="5" rx="2.5" fill="#0d1e2e"/>
+        <rect x="118" y="174" width="132" height="5" rx="2.5" fill="#ff6b00" opacity=".9"/>
+
+        <!-- ── Gauge panel ── -->
+        <rect x="100" y="234" width="196" height="98" rx="8" fill="#0b0b0b" stroke="#1e1e1e" stroke-width="1"/>
+        <text x="148" y="246" text-anchor="middle" fill="#334466" font-size="7.5" font-family="monospace">LO PRESS</text>
+        <text x="248" y="246" text-anchor="middle" fill="#553311" font-size="7.5" font-family="monospace">HI PRESS</text>
+        <!-- Left gauge (blue) -->
+        <circle cx="148" cy="283" r="34" fill="#090909" stroke="#152030" stroke-width="2"/>
+        <circle cx="148" cy="283" r="29" fill="#0a0a0a"/>
+        <g stroke="#2a3a4a" stroke-width="1">
+          <line x1="148" y1="250" x2="148" y2="256"/><line x1="167" y1="255" x2="164" y2="260"/>
+          <line x1="177" y1="271" x2="172" y2="273"/><line x1="175" y1="291" x2="170" y2="290"/>
+          <line x1="164" y1="305" x2="161" y2="300"/><line x1="148" y1="310" x2="148" y2="304"/>
+          <line x1="132" y1="305" x2="135" y2="300"/><line x1="121" y1="291" x2="126" y2="290"/>
+          <line x1="119" y1="271" x2="124" y2="273"/><line x1="129" y1="255" x2="132" y2="260"/>
+        </g>
+        <line x1="148" y1="283" x2="162" y2="260" stroke="#3399ff" stroke-width="2.5" stroke-linecap="round" filter="url(#kuGlow)"/>
+        <circle cx="148" cy="283" r="4.5" fill="#3399ff" filter="url(#kuGlow)"/>
+        <text x="148" y="295" text-anchor="middle" fill="#3399ff" font-size="7.5" font-family="monospace">2.4</text>
+        <!-- Right gauge (orange) -->
+        <circle cx="248" cy="283" r="34" fill="#090909" stroke="#2a1200" stroke-width="2"/>
+        <circle cx="248" cy="283" r="29" fill="#0a0a0a"/>
+        <g stroke="#2a1800" stroke-width="1">
+          <line x1="248" y1="250" x2="248" y2="256"/><line x1="267" y1="255" x2="264" y2="260"/>
+          <line x1="277" y1="271" x2="272" y2="273"/><line x1="275" y1="291" x2="270" y2="290"/>
+          <line x1="264" y1="305" x2="261" y2="300"/><line x1="248" y1="310" x2="248" y2="304"/>
+          <line x1="232" y1="305" x2="235" y2="300"/><line x1="221" y1="291" x2="226" y2="290"/>
+          <line x1="219" y1="271" x2="224" y2="273"/><line x1="229" y1="255" x2="232" y2="260"/>
+        </g>
+        <line x1="248" y1="283" x2="262" y2="258" stroke="#ff6b00" stroke-width="2.5" stroke-linecap="round" filter="url(#kuGlow)"/>
+        <circle cx="248" cy="283" r="4.5" fill="#ff6b00" filter="url(#kuGlow)"/>
+        <text x="248" y="295" text-anchor="middle" fill="#ff6b00" font-size="7.5" font-family="monospace">16.8</text>
+
+        <!-- ── Buttons ── -->
+        <rect x="100" y="348" width="196" height="52" rx="7" fill="#0b0b0b" stroke="#1a1a1a" stroke-width="1"/>
+        <rect x="110" y="358" width="52" height="24" rx="5" fill="#0d1e10" stroke="#1a4020" stroke-width="1"/>
+        <text x="136" y="374" text-anchor="middle" fill="#00cc55" font-size="8.5" font-family="Arial" font-weight="bold">START</text>
+        <rect x="168" y="358" width="52" height="24" rx="5" fill="#1a1a1a" stroke="#2a2a2a" stroke-width="1"/>
+        <text x="194" y="374" text-anchor="middle" fill="#555" font-size="8.5" font-family="Arial">STOP</text>
+        <rect x="226" y="358" width="58" height="24" rx="5" fill="#ff6b00"/>
+        <text x="255" y="374" text-anchor="middle" fill="#000" font-size="7.5" font-family="Arial" font-weight="bold">VACUUM</text>
+
+        <!-- ── Hoses ── -->
+        <path d="M 88 270 Q 64 280 62 300 Q 60 320 76 335 Q 90 345 110 345" stroke="#1a4488" stroke-width="6" fill="none" stroke-linecap="round"/>
+        <path d="M 88 270 Q 64 280 62 300 Q 60 320 76 335 Q 90 345 110 345" stroke="#2255aa" stroke-width="4" fill="none" stroke-linecap="round" opacity=".5"/>
+        <circle cx="110" cy="345" r="7" fill="#0d1e30" stroke="#3399ff" stroke-width="2"/>
+        <path d="M 308 270 Q 332 280 334 300 Q 336 320 320 335 Q 306 345 286 345" stroke="#661100" stroke-width="6" fill="none" stroke-linecap="round"/>
+        <path d="M 308 270 Q 332 280 334 300 Q 336 320 320 335 Q 306 345 286 345" stroke="#aa2200" stroke-width="4" fill="none" stroke-linecap="round" opacity=".5"/>
+        <circle cx="286" cy="345" r="7" fill="#1a0800" stroke="#ff6b00" stroke-width="2"/>
+
+        <!-- ── Wheels ── -->
+        <circle cx="120" cy="432" r="18" fill="#141414" stroke="#2a2a2a" stroke-width="2"/>
+        <circle cx="120" cy="432" r="10" fill="#0d0d0d" stroke="#333" stroke-width="1"/>
+        <circle cx="120" cy="432" r="4"  fill="#ff6b00"/>
+        <circle cx="276" cy="432" r="18" fill="#141414" stroke="#2a2a2a" stroke-width="2"/>
+        <circle cx="276" cy="432" r="10" fill="#0d0d0d" stroke="#333" stroke-width="1"/>
+        <circle cx="276" cy="432" r="4"  fill="#ff6b00"/>
+
+        <!-- Base platform -->
+        <rect x="88" y="415" width="220" height="20" rx="6" fill="#131313" stroke="#1e1e1e" stroke-width="1"/>
+
+        <!-- ── Brand label (rendered last = on top) ── -->
+        <rect x="128" y="408" width="140" height="17" rx="4" fill="#ff6b00"/>
+        <text x="198" y="420" text-anchor="middle" fill="#000" font-size="8.5" font-family="Arial" font-weight="bold" letter-spacing="1">AC SERVICE</text>
+      </svg>
+    </div>
+
+  </div>
+</section>
+
+<!-- ╔══ PRICING ══╗ -->
+<section class="ku-pricing" id="ku-cenas">
+  <div class="container">
+    <div class="ku-section-header">
+      <span class="ku-label">
+          <span class="material-symbols-rounded">sell</span> {{ 'ku.prices_label' | translate }}
+        </span>
+        <h2 class="ku-section-title">{{ 'ku.prices_title' | translate }} <span>{{ 'ku.prices_title_2' | translate }}</span></h2>
+    </div>
+
+    <div class="ku-cards">
+
+      <!-- Card 1 – Diagnostics -->
+      <div class="ku-card ku-card--featured">
+        <div class="ku-card-icon">
+          <span class="material-symbols-rounded">speed</span>
+        </div>
+        <h3 class="ku-card-title">{{ 'ku.c1_title' | translate }}</h3>
+        <p class="ku-card-desc">{{ 'ku.c1_desc' | translate }}</p>
+        <div class="ku-card-price-row">
+          <span class="ku-price">25.00</span>
+          <span class="ku-price-unit">EUR</span>
+        </div>
+      </div>
+
+      <!-- Card 2 – R134a -->
+      <div class="ku-card">
+        <div class="ku-card-icon">
+          <span class="material-symbols-rounded">water_drop</span>
+        </div>
+        <h3 class="ku-card-title">{{ 'ku.c2_title' | translate }}</h3>
+        <p class="ku-card-desc">{{ 'ku.c2_desc' | translate }}</p>
+        <div class="ku-card-price-row">
+          <span class="ku-price">7</span>
+          <span class="ku-price-unit">EUR / 100g</span>
+          <span class="ku-badge-pill">R134a</span>
+        </div>
+      </div>
+
+      <!-- Card 3 – R1234yf -->
+      <div class="ku-card">
+        <div class="ku-card-icon ku-card-icon--eco">
+          <span class="material-symbols-rounded">water_drop</span>
+          <span class="material-symbols-rounded ku-eco-leaf">eco</span>
+        </div>
+        <h3 class="ku-card-title">{{ 'ku.c3_title' | translate }}</h3>
+        <p class="ku-card-desc">{{ 'ku.c3_desc' | translate }}</p>
+        <div class="ku-card-price-row">
+          <span class="ku-price">20</span>
+          <span class="ku-price-unit">EUR / 100g</span>
+          <span class="ku-badge-pill">R1234yf</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ╔══ WHY US ══╗ -->
+<section class="ku-whyus">
+  <div class="container">
+    <div class="ku-section-header">
+      <span class="ku-label">
+          <span class="material-symbols-rounded">grade</span> {{ 'ku.why_label' | translate }}
+        </span>
+        <h2 class="ku-section-title">{{ 'ku.why_title_1' | translate }} <span>{{ 'ku.why_title_2' | translate }}</span></h2>
+    </div>
+
+    <div class="ku-features">
+
+      <div class="ku-feature">
+        <div class="ku-feature-icon">
+          <span class="material-symbols-rounded">biotech</span>
+        </div>
+          <h3 class="ku-feature-title">{{ 'ku.f1_title' | translate }}</h3>
+          <p class="ku-feature-desc">{{ 'ku.f1_desc' | translate }}</p>
+      </div>
+
+      <div class="ku-feature">
+        <div class="ku-feature-icon">
+          <span class="material-symbols-rounded">build</span>
+        </div>
+          <h3 class="ku-feature-title">{{ 'ku.f2_title' | translate }}</h3>
+          <p class="ku-feature-desc">{{ 'ku.f2_desc' | translate }}</p>
+      </div>
+
+      <div class="ku-feature">
+        <div class="ku-feature-icon">
+          <span class="material-symbols-rounded">bolt</span>
+        </div>
+          <h3 class="ku-feature-title">{{ 'ku.f3_title' | translate }}</h3>
+          <p class="ku-feature-desc">{{ 'ku.f3_desc' | translate }}</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ╔══ CTA ══╗ -->
+<section class="ku-cta" id="ku-rezervet">
+  <div class="container">
+    <div class="ku-cta-inner">
+      <h2 class="ku-cta-title">{{ 'ku.cta_title_1' | translate }} <span>{{ 'ku.cta_title_2' | translate }}</span></h2>
+      <p class="ku-cta-desc">{{ 'ku.cta_desc' | translate }}</p>
+      <a routerLink="/" fragment="contact" class="btn-primary">
+        <span class="material-symbols-rounded">event_available</span>
+        {{ 'ku.btn_book' | translate }}
+      </a>
+    </div>
+  </div>
+</section>

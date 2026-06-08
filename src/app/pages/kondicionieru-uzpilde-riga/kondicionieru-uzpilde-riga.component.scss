@@ -1,0 +1,428 @@
+// ─── Shared layout helpers reused from global ──────────────
+// .container, h1–h5, .btn-primary come from global styles.scss
+// This file only contains page-specific styles scoped to ku- prefix.
+
+:host {
+  display: block;
+}
+
+// ─── Tokens ────────────────────────────────────────────────
+$accent:       var(--accent);
+$accent-glow:  var(--accent-glow);
+$bg:           var(--bg-primary);
+$bg-alt:       var(--bg-secondary);
+$bg-card:      var(--bg-card);
+$text:         var(--color-primary);
+$muted:        var(--color-muted);
+$border:       var(--border);
+$border-acc:   var(--border-accent);
+$radius-md:    var(--radius-md);
+$radius-lg:    var(--radius-lg);
+$transition:   var(--transition);
+
+// ─── HERO ───────────────────────────────────────────────────
+.ku-hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: calc(var(--nav-height) + 48px) 0 80px;
+  background:
+    radial-gradient(ellipse at 15% 50%, rgba(255, 107, 0, 0.06) 0%, transparent 55%),
+    radial-gradient(ellipse at 85% 20%, rgba(255, 107, 0, 0.04) 0%, transparent 50%),
+    var(--bg-primary);
+  position: relative;
+  overflow: hidden;
+
+  &::after {
+    content: '';
+    position: absolute; bottom: 0; left: 0; right: 0; height: 1px;
+    background: linear-gradient(90deg, transparent, var(--accent), transparent);
+    opacity: 0.4;
+  }
+}
+
+.ku-hero-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 64px;
+
+  @media (max-width: 900px) {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 40px;
+  }
+}
+
+.ku-hero-content {
+  @media (max-width: 900px) { order: 2; }
+}
+
+.ku-visual {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 320px; height: 320px;
+    background: radial-gradient(circle, rgba(255, 107, 0, 0.09) 0%, transparent 70%);
+    border-radius: 50%;
+  }
+
+  svg {
+    width: 100%; max-width: 420px; height: auto;
+    position: relative; z-index: 1;
+    filter: drop-shadow(0 20px 60px rgba(255, 107, 0, 0.15));
+  }
+
+  @media (max-width: 900px) {
+    order: 1;
+    svg { max-width: 260px; }
+  }
+}
+
+// badge
+.ku-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(255, 107, 0, 0.1);
+  border: 1px solid var(--border-accent);
+  border-radius: 50px;
+  padding: 6px 16px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 24px;
+
+  .material-symbols-rounded { font-size: 14px; }
+}
+
+// headline
+.ku-title {
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 5vw, 3.8rem);
+  font-weight: 900;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  margin-bottom: 20px;
+
+  span { color: var(--accent); display: block; }
+}
+
+// subtitle
+.ku-sub {
+  font-size: 1rem;
+  color: var(--color-secondary);
+  margin-bottom: 36px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-weight: 300;
+
+  strong { color: var(--accent); font-weight: 600; }
+}
+
+// action buttons
+.ku-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+
+  @media (max-width: 900px) { justify-content: center; }
+  @media (max-width: 480px) {
+    flex-direction: column;
+    .btn-primary, .btn-secondary { width: 100%; justify-content: center; }
+  }
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+  color: var(--color-primary);
+  padding: 13px 28px;
+  border-radius: var(--radius-sm);
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 14px;
+  text-decoration: none;
+  border: 1px solid var(--border);
+  transition: all var(--transition);
+
+  .material-symbols-rounded { font-size: 18px; }
+
+  &:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+  }
+}
+
+// ─── SECTION SHARED ─────────────────────────────────────────
+.ku-section-header {
+  text-align: center;
+  max-width: 560px;
+  margin: 0 auto 56px;
+}
+
+.ku-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--accent);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+
+  .material-symbols-rounded { font-size: 14px; }
+}
+
+.ku-section-title {
+  font-family: var(--font-heading);
+  font-size: clamp(1.7rem, 3.5vw, 2.6rem);
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+
+  span { color: var(--accent); }
+}
+
+// ─── PRICING ────────────────────────────────────────────────
+.ku-pricing {
+  padding: var(--section-padding) 0;
+  background: var(--bg-primary);
+}
+
+.ku-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  align-items: start;
+
+  @media (max-width: 900px) {
+    grid-template-columns: 1fr;
+    max-width: 440px;
+    margin-inline: auto;
+  }
+}
+
+.ku-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  position: relative;
+  overflow: hidden;
+  transition: transform var(--transition), border-color var(--transition), box-shadow var(--transition);
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; height: 2px;
+    background: linear-gradient(90deg, transparent, var(--accent), transparent);
+    opacity: 0;
+    transition: opacity var(--transition);
+  }
+
+  &:hover {
+    transform: translateY(-6px);
+    border-color: var(--border-accent);
+    box-shadow: 0 20px 60px rgba(255, 107, 0, 0.08);
+
+    &::before { opacity: 1; }
+  }
+
+  &--featured {
+    border-color: var(--border-accent);
+    background: linear-gradient(155deg, #151515 0%, #111 100%);
+
+    &::before { opacity: 1; }
+  }
+}
+
+.ku-card-icon {
+  width: 52px; height: 52px;
+  background: rgba(255, 107, 0, 0.1);
+  border: 1px solid var(--border-accent);
+  border-radius: var(--radius-md);
+  display: flex; align-items: center; justify-content: center;
+  margin-bottom: 24px;
+  position: relative;
+
+  .material-symbols-rounded {
+    font-size: 24px;
+    color: var(--accent);
+    font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+  }
+
+  &--eco {
+    .material-symbols-rounded:first-child { color: var(--accent); }
+  }
+}
+
+.ku-eco-leaf {
+  position: absolute;
+  top: -6px; right: -6px;
+  font-size: 12px !important;
+  color: #00cc66 !important;
+  background: #0a1a0a;
+  border: 1px solid #1a3a1a;
+  border-radius: 50%;
+  padding: 2px;
+  font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 12 !important;
+}
+
+.ku-card-title {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  line-height: 1.4;
+  color: var(--color-primary);
+}
+
+.ku-card-desc {
+  font-size: 0.85rem;
+  color: var(--color-muted);
+  margin-bottom: 28px;
+  line-height: 1.65;
+}
+
+.ku-card-price-row {
+  border-top: 1px solid var(--border);
+  padding-top: 24px;
+  display: flex;
+  align-items: flex-end;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.ku-price {
+  font-family: var(--font-heading);
+  font-size: 2.4rem;
+  font-weight: 900;
+  color: var(--accent);
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+.ku-price-unit {
+  font-size: 0.9rem;
+  color: var(--color-muted);
+  padding-bottom: 4px;
+}
+
+.ku-badge-pill {
+  margin-left: auto;
+  align-self: flex-end;
+  display: inline-block;
+  background: rgba(255, 107, 0, 0.1);
+  border: 1px solid var(--border-accent);
+  color: var(--accent);
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  padding: 3px 8px;
+  border-radius: 4px;
+}
+
+// ─── WHY US ─────────────────────────────────────────────────
+.ku-whyus {
+  padding: var(--section-padding) 0;
+  background:
+    radial-gradient(ellipse at 50% 0%, rgba(255, 107, 0, 0.05) 0%, transparent 55%),
+    var(--bg-secondary);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.ku-features {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+
+  @media (max-width: 900px) {
+    grid-template-columns: 1fr;
+    max-width: 400px;
+    margin-inline: auto;
+  }
+}
+
+.ku-feature {
+  text-align: center;
+  padding: 36px 28px;
+  border-radius: var(--radius-md);
+  border: 1px solid transparent;
+  transition: background var(--transition), border-color var(--transition);
+
+  &:hover {
+    background: rgba(255, 107, 0, 0.04);
+    border-color: var(--border);
+  }
+}
+
+.ku-feature-icon {
+  width: 64px; height: 64px;
+  background: rgba(255, 107, 0, 0.1);
+  border: 1px solid var(--border-accent);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  margin: 0 auto 20px;
+
+  .material-symbols-rounded {
+    font-size: 26px;
+    color: var(--accent);
+    font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+  }
+}
+
+.ku-feature-title {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: var(--color-primary);
+}
+
+.ku-feature-desc {
+  font-size: 0.85rem;
+  color: var(--color-muted);
+  line-height: 1.65;
+}
+
+// ─── CTA ────────────────────────────────────────────────────
+.ku-cta {
+  padding: var(--section-padding) 0;
+  background: var(--bg-primary);
+}
+
+.ku-cta-inner {
+  text-align: center;
+  max-width: 620px;
+  margin: 0 auto;
+}
+
+.ku-cta-title {
+  font-family: var(--font-heading);
+  font-size: clamp(1.7rem, 4vw, 2.9rem);
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  margin-bottom: 16px;
+  line-height: 1.15;
+
+  span { color: var(--accent); }
+}
+
+.ku-cta-desc {
+  font-size: 1rem;
+  color: var(--color-muted);
+  margin-bottom: 40px;
+  line-height: 1.6;
+}

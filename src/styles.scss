@@ -96,6 +96,11 @@ img { max-width: 100%; display: block; }
   overflow: hidden;
 }
 
+// Offset anchor targets so they clear the fixed navbar
+section[id] {
+  scroll-margin-top: calc(var(--nav-height) + 36px);
+}
+
 .section-label {
   display: inline-flex;
   align-items: center;

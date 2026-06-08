@@ -1,17 +1,19 @@
 import { Component, HostListener, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Router, RouterLink, RouterLinkActive } from '@angular/router';
 import { TranslateModule } from '@ngx-translate/core';
 import { LanguageService } from '../../services/language.service';
 
 @Component({
   selector: 'app-navbar',
   standalone: true,
-  imports: [CommonModule, TranslateModule],
+  imports: [CommonModule, RouterLink, RouterLinkActive, TranslateModule],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.scss',
 })
 export class NavbarComponent {
   langSvc = inject(LanguageService);
+  router  = inject(Router);
   scrolled = false;
   menuOpen = false;
 
@@ -36,6 +38,9 @@ export class NavbarComponent {
       const offset = window.innerWidth <= 1024 ? 96 : 116;
       const top = el.getBoundingClientRect().top + window.scrollY - offset;
       window.scrollTo({ top, behavior: 'smooth' });
+    } else {
+      // Not on home page — navigate there and let anchorScrolling handle it
+      this.router.navigate(['/'], { fragment: id });
     }
   }
 

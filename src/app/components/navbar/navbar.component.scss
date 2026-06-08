@@ -36,6 +36,16 @@
     flex-wrap: wrap;
   }
 
+  @media (max-width: 460px) {
+    flex-wrap: nowrap;
+    gap: 12px;
+    padding: 5px 16px;
+
+    // Hide hours and email — keep only the phone number
+    .nav-info-item { display: none; }
+    a[href^="mailto"] { display: none; }
+  }
+
   a {
     display: inline-flex;
     align-items: center;
@@ -159,6 +169,18 @@
   }
 
   &:hover {
+    color: var(--color-primary);
+    &::after { transform: translateX(-50%) scaleX(1); }
+  }
+}
+
+// Route link variant (anchor inside nav-links)
+.nav-link--route {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+
+  &.active {
     color: var(--color-primary);
     &::after { transform: translateX(-50%) scaleX(1); }
   }
