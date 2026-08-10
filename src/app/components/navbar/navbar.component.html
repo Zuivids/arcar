@@ -16,11 +16,6 @@
           </button>
         </li>
       }
-      <li>
-        <a class="nav-link nav-link--route" routerLink="/kondicionieru-uzpilde-riga" routerLinkActive="active">
-          Kondicionieru uzpilde
-        </a>
-      </li>
     </ul>
 
     <!-- Right side -->
@@ -51,6 +46,21 @@
         <span></span>
         <span></span>
       </button>
+    </div>
+  </div>
+
+  <!-- Line 2 — dedicated service pages -->
+  <div class="nav-secondary">
+    <div class="container nav-secondary-inner">
+      <ul class="nav-links-secondary">
+        @for (link of routeLinks; track link.path) {
+          <li>
+            <a class="nav-link-secondary" [routerLink]="link.path" routerLinkActive="active">
+              {{ link.label }}
+            </a>
+          </li>
+        }
+      </ul>
     </div>
   </div>
 
@@ -87,11 +97,13 @@
           </button>
         </li>
       }
-      <li>
-        <a class="mobile-link" routerLink="/kondicionieru-uzpilde-riga" routerLinkActive="active" (click)="menuOpen = false">
-          Kondicionieru uzpilde
-        </a>
-      </li>
+      @for (link of routeLinks; track link.path) {
+        <li>
+          <a class="mobile-link" [routerLink]="link.path" routerLinkActive="active" (click)="menuOpen = false">
+            {{ link.label }}
+          </a>
+        </li>
+      }
     </ul>
     <div class="mobile-actions">
       <div class="lang-toggle">

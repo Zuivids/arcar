@@ -28,6 +28,7 @@
   --transition:      0.3s cubic-bezier(0.4, 0, 0.2, 1);
   --transition-slow: 0.6s cubic-bezier(0.4, 0, 0.2, 1);
   --nav-height:      80px;
+  --nav-secondary-height: 46px;
   --section-padding: 120px;
   --container-max:   1280px;
 }
@@ -35,6 +36,7 @@
 @media (max-width: 1185px) {
   :root {
     --nav-height: 60px;
+    --nav-secondary-height: 0px;
   }
 }
 
@@ -98,7 +100,7 @@ img { max-width: 100%; display: block; }
 
 // Offset anchor targets so they clear the fixed navbar
 section[id] {
-  scroll-margin-top: calc(var(--nav-height) + 36px);
+  scroll-margin-top: calc(var(--nav-height) + var(--nav-secondary-height) + 36px);
 }
 
 .section-label {
@@ -261,4 +263,163 @@ section[id] {
 
 // ─── Selection ───────────────────────────────────
 ::selection { background: var(--accent); color: #fff; }
+
+// ─── Simple Page (shared layout for basic route pages) ──
+.simple-hero {
+  min-height: 55vh;
+  display: flex;
+  align-items: center;
+  padding: calc(var(--nav-height) + var(--nav-secondary-height) + 56px) 0 72px;
+  background:
+    radial-gradient(ellipse at 15% 30%, rgba(255, 107, 0, 0.06) 0%, transparent 55%),
+    var(--bg-primary);
+  border-bottom: 1px solid var(--border);
+}
+
+.simple-hero-inner {
+  max-width: 720px;
+}
+
+.simple-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(255, 107, 0, 0.1);
+  border: 1px solid var(--border-accent);
+  border-radius: 50px;
+  padding: 6px 16px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 24px;
+
+  .material-symbols-rounded { font-size: 14px; }
+}
+
+.simple-title {
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 4.5vw, 3.4rem);
+  font-weight: 900;
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.simple-sub {
+  font-size: 1.05rem;
+  color: var(--color-secondary);
+  margin-bottom: 36px;
+  line-height: 1.65;
+  max-width: 620px;
+}
+
+.simple-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+
+  @media (max-width: 480px) {
+    flex-direction: column;
+    .btn-primary, .btn-secondary { width: 100%; justify-content: center; }
+  }
+}
+
+.simple-intro {
+  padding: var(--section-padding) 0 0;
+  background: var(--bg-primary);
+}
+
+.simple-intro-text {
+  max-width: 760px;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 1rem;
+  color: var(--color-secondary);
+  line-height: 1.75;
+}
+
+.simple-features {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 56px;
+
+  @media (max-width: 900px) {
+    grid-template-columns: 1fr;
+    max-width: 420px;
+    margin-inline: auto;
+  }
+}
+
+.simple-feature {
+  text-align: center;
+  padding: 36px 28px;
+  border-radius: var(--radius-md);
+  border: 1px solid transparent;
+  transition: background var(--transition), border-color var(--transition);
+
+  &:hover {
+    background: rgba(255, 107, 0, 0.04);
+    border-color: var(--border);
+  }
+}
+
+.simple-feature-icon {
+  width: 64px; height: 64px;
+  background: rgba(255, 107, 0, 0.1);
+  border: 1px solid var(--border-accent);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  margin: 0 auto 20px;
+
+  .material-symbols-rounded {
+    font-size: 26px;
+    color: var(--accent);
+    font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+  }
+}
+
+.simple-feature-title {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: var(--color-primary);
+}
+
+.simple-feature-desc {
+  font-size: 0.85rem;
+  color: var(--color-muted);
+  line-height: 1.65;
+}
+
+.simple-cta {
+  padding: var(--section-padding) 0;
+  background: var(--bg-primary);
+}
+
+.simple-cta-inner {
+  text-align: center;
+  max-width: 620px;
+  margin: 0 auto;
+}
+
+.simple-cta-title {
+  font-family: var(--font-heading);
+  font-size: clamp(1.7rem, 4vw, 2.6rem);
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  margin-bottom: 16px;
+  line-height: 1.15;
+}
+
+.simple-cta-desc {
+  font-size: 1rem;
+  color: var(--color-muted);
+  margin-bottom: 40px;
+  line-height: 1.6;
+}
 

@@ -1,4 +1,7 @@
 {
+  "common": {
+    "book": "Pieteikties"
+  },
   "nav": {
     "home": "Sākums",
     "about": "Par Mums",
@@ -157,5 +160,77 @@
     "cta_title_1": "Piesaki savu auto",
     "cta_title_2": "jau šodien",
     "cta_desc": "Brauciet ar aukstu un komfortablu salonu. Ātra pierakstīšanās — bez rinām."
+  },
+  "pages": {
+    "alignment": {
+      "badge": "Precīza riteņu ģeometrija",
+      "title": "Riteņu savirze",
+      "sub": "Precīza riteņu ģeometrijas regulēšana drošākai braukšanai un vienmērīgam riepu nodilumam.",
+      "intro": "Nepareiza riteņu savirze paātrina riepu nodilumu un pasliktina auto vadāmību. Mūsu servisā veicam precīzu riteņu ģeometrijas pārbaudi un regulēšanu ar mūsdienīgu datorizētu aprīkojumu.",
+      "f1_title": "Datorizēta diagnostika",
+      "f1_desc": "Precīzi mērījumi ar 3D stendu visām riteņu ass vērtībām.",
+      "f2_title": "Ilgāks riepu mūžs",
+      "f2_desc": "Vienmērīgs riepu nodilums un mazāks degvielas patēriņš.",
+      "f3_title": "Droša vadīšana",
+      "f3_desc": "Stabila auto gaita un precīza vadāmība ikvienā ātrumā.",
+      "cta_title": "Piesakies riteņu savirzes pārbaudei",
+      "cta_desc": "Sazinies ar mums un rezervē ērtāko laiku vizītei."
+    },
+    "ta": {
+      "badge": "Tehniskā apskate",
+      "title": "Sagatavošana tehniskajai apskatei",
+      "sub": "Sagatavosim jūsu auto tehniskajai apskatei un nokārtosim to jūsu vietā — ērti, tieši no jūsu durvīm.",
+      "intro": "Uzņemamies pilnu rūpi par jūsu automašīnas tehnisko apskati. Sagatavojam auto, novēršam trūkumus un aizvedam to uz apskati jūsu vietā — pakalpojumu piedāvājam ar auto nogādāšanu, sākot tieši no jūsu durvīm.",
+      "f1_title": "Pilna pirmspārbaude",
+      "f1_desc": "Pārbaudām bremzes, apgaismojumu, balstiekārtu un citas sistēmas, novēršot trūkumus uz vietas.",
+      "f2_title": "Auto aizvešana uz apskati",
+      "f2_desc": "Nokārtosim tehnisko apskati jūsu vietā — jums nekas nav jādara.",
+      "f3_title": "Serviss no jūsu durvīm",
+      "f3_desc": "Paņemam un atgriežam automašīnu tieši pie jūsu durvīm.",
+      "cta_title": "Sagatavo auto tehniskajai apskatei",
+      "cta_desc": "Piesakies pārbaudei un brauc uz TA ar pārliecību."
+    },
+    "carsales": {
+      "badge": "Auto pārdošana",
+      "title": "Auto pārdošanas serviss",
+      "sub": "Sagatavojam jūsu automašīnu pārdošanai — tīrīšana, kvalitatīvas bildes un droša glabāšana līdz pat atslēgu nodošanai.",
+      "intro": "Piedāvājam pilnu servisu automašīnas pārdošanai — no rūpīgas auto tīrīšanas un profesionālas nofotografēšanas līdz drošai glabāšanai apsargātā teritorijā, līdz brīdim, kad atslēgas tiek nodotas jaunajam īpašniekam.",
+      "f1_title": "Auto tīrīšana",
+      "f1_desc": "Rūpīga automašīnas tīrīšana un sagatavošana pirms pārdošanas.",
+      "f2_title": "Profesionāla nofotografēšana",
+      "f2_desc": "Kvalitatīvas bildes, kas palīdz auto pārdot ātrāk un izdevīgāk.",
+      "f3_title": "Droša glabāšana",
+      "f3_desc": "Automašīnas glabāšana apsargātā teritorijā līdz atslēgu nodošanai.",
+      "cta_title": "Vēlies pārdot vai iegādāties auto?",
+      "cta_desc": "Sazinies ar mums, lai uzzinātu vairāk par mūsu pakalpojumu."
+    },
+    "usparts": {
+      "badge": "Detaļas, kuru nav Eiropā",
+      "title": "Amerikas auto detaļas",
+      "sub": "Rezerves daļas, kuras nav nopērkamas Eiropā — pasūtām no lielākajiem ASV tirgotājiem un piegādājam līdz jūsu durvīm.",
+      "intro": "Ja meklētā detaļa nav atrodama Eiropā, mēs to pasūtīsim tieši no lielākajiem ASV rezerves daļu tirgotājiem. Uzņemamies pilnu procesu — no pasūtījuma un atmuitošanas līdz piegādei tieši līdz jūsu durvīm un profesionālai uzstādīšanai mūsu servisā.",
+      "f1_title": "Detaļas, kuru nav Eiropā",
+      "f1_desc": "Pasūtām rezerves daļas tieši no lielākajiem ASV tirgotājiem, ja tās nav atrodamas Eiropā.",
+      "f2_title": "Atmuitošana un piegāde",
+      "f2_desc": "Uzņemamies atmuitošanu un piegādājam detaļu līdz jūsu durvīm.",
+      "f3_title": "Profesionāla uzstādīšana",
+      "f3_desc": "Piedāvājam arī detaļas uzstādīšanu mūsu servisā.",
+      "cta_title": "Meklē detaļu savam Amerikas auto?",
+      "cta_desc": "Sūti pieprasījumu, un mēs atradīsim vajadzīgo daļu."
+    },
+    "usreg": {
+      "badge": "Reģistrācija un sertifikācija",
+      "title": "Amerikas auto reģistrācija un sertifikācija",
+      "sub": "Palīdzam noformēt ASV izcelsmes automobiļa reģistrāciju un atbilstības sertifikātu.",
+      "intro": "Amerikas automobiļu reģistrācija Eiropā prasa papildu pārbaudes un dokumentāciju. Mēs palīdzam sagatavot auto atbilstības apliecinājumam un veiksmīgi noformēt reģistrāciju.",
+      "f1_title": "Atbilstības pārbaude",
+      "f1_desc": "Izvērtējam automašīnas atbilstību ES prasībām.",
+      "f2_title": "Dokumentu sagatavošana",
+      "f2_desc": "Palīdzam sakārtot visu nepieciešamo dokumentāciju sertifikācijai.",
+      "f3_title": "Pilns atbalsts",
+      "f3_desc": "Pavadām visu procesu līdz auto reģistrācijai uz jūsu vārda.",
+      "cta_title": "Vajag palīdzību ar auto reģistrāciju?",
+      "cta_desc": "Sazinies ar mums, un mēs izstāstīsim nepieciešamos soļus."
+    }
   }
 }
