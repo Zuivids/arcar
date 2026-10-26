@@ -41,8 +41,9 @@
     gap: 12px;
     padding: 5px 16px;
 
-    // Hide hours and email — keep only the phone number
+    // Hide hours, address and email — keep only the phone number
     .nav-info-item { display: none; }
+    .nav-info-address { display: none; }
     a[href^="mailto"] { display: none; }
   }
 
