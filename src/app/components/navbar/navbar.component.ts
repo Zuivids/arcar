@@ -26,6 +26,16 @@ export class NavbarComponent {
     { key: 'nav.contact',      id: 'contact' },
   ];
 
+  // Line 2 — dedicated service pages (own routes, not home-page anchors)
+  routeLinks = [
+    { label: 'Kondicionieru uzpilde',         path: '/kondicionieru-uzpilde-riga' },
+    { label: 'Riteņu savirze',                path: '/ritenu-savirze-riga' },
+    { label: 'TA sagatavošana',               path: '/ta-sagatavosana-riga' },
+    { label: 'Auto pārdošana',                path: '/auto-pardosanas-serviss-riga' },
+    { label: 'ASV auto detaļas',              path: '/amerikas-auto-detalas-riga' },
+    { label: 'ASV reģ. / sertifikācija',      path: '/amerikas-auto-registracija-sertifikacija-riga' },
+  ];
+
   @HostListener('window:scroll')
   onScroll(): void {
     this.scrolled = window.scrollY > 60;
@@ -35,7 +45,7 @@ export class NavbarComponent {
     this.menuOpen = false;
     const el = document.getElementById(id);
     if (el) {
-      const offset = window.innerWidth <= 1185 ? 96 : 116;
+      const offset = window.innerWidth <= 1185 ? 96 : 162;
       const top = el.getBoundingClientRect().top + window.scrollY - offset;
       window.scrollTo({ top, behavior: 'smooth' });
     } else {
