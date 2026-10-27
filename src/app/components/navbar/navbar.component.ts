@@ -28,12 +28,12 @@ export class NavbarComponent {
 
   // Line 2 — dedicated service pages (own routes, not home-page anchors)
   routeLinks = [
-    { label: 'Kondicionieru uzpilde',         path: '/kondicionieru-uzpilde-riga' },
-    { label: 'Riteņu savirze',                path: '/ritenu-savirze-riga' },
-    { label: 'TA sagatavošana',               path: '/ta-sagatavosana-riga' },
-    { label: 'Auto pārdošana',                path: '/auto-pardosanas-serviss-riga' },
-    { label: 'ASV auto detaļas',              path: '/amerikas-auto-detalas-riga' },
-    { label: 'ASV reģ. / sertifikācija',      path: '/amerikas-auto-registracija-sertifikacija-riga' },
+    { key: 'nav.route_ac',        path: '/kondicionieru-uzpilde-riga' },
+    { key: 'nav.route_alignment', path: '/ritenu-savirze-riga' },
+    { key: 'nav.route_ta',        path: '/ta-sagatavosana-riga' },
+    { key: 'nav.route_sale',      path: '/auto-pardosanas-serviss-riga' },
+    { key: 'nav.route_us_parts',  path: '/amerikas-auto-detalas-riga' },
+    { key: 'nav.route_us_reg',    path: '/amerikas-auto-registracija-sertifikacija-riga' },
   ];
 
   @HostListener('window:scroll')

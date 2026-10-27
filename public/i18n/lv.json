@@ -12,7 +12,13 @@
     "gallery": "Galerija",
     "testimonials": "Atsauksmes",
     "contact": "Kontakti",
-    "book": "Pieteikt Servisu"
+    "book": "Pieteikt Servisu",
+    "route_ac": "Kondicionieru uzpilde",
+    "route_alignment": "Riteņu savirze",
+    "route_ta": "TA sagatavošana",
+    "route_sale": "Auto pārdošana",
+    "route_us_parts": "ASV auto detaļas",
+    "route_us_reg": "ASV reģ. / sertifikācija"
   },
   "hero": {
     "tagline": "PREMIUM AUTO SERVISS",

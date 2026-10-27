@@ -56,7 +56,7 @@
         @for (link of routeLinks; track link.path) {
           <li>
             <a class="nav-link-secondary" [routerLink]="link.path" routerLinkActive="active">
-              {{ link.label }}
+              {{ link.key | translate }}
             </a>
           </li>
         }
@@ -106,7 +106,7 @@
       @for (link of routeLinks; track link.path) {
         <li>
           <a class="mobile-link" [routerLink]="link.path" routerLinkActive="active" (click)="menuOpen = false">
-            {{ link.label }}
+            {{ link.key | translate }}
           </a>
         </li>
       }
