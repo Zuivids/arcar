@@ -15,6 +15,18 @@
       <p class="section-subtitle">{{ 'services.subtitle' | translate }}</p>
     </div>
 
+    <!-- News -->
+    <div class="services-news card-glass" scrollReveal>
+      <div class="card-icon-wrap">
+        <span class="material-symbols-rounded card-icon">air</span>
+      </div>
+      <div class="news-body">
+        <span class="news-badge">{{ 'services.news_badge' | translate }}</span>
+        <h3 class="news-title">{{ 'services.news_title' | translate }}</h3>
+        <p class="news-desc">{{ 'services.news_desc' | translate }}</p>
+      </div>
+    </div>
+
     <!-- Grid -->
     <div class="services-grid">
       @for (svc of services; track svc.titleKey; let i = $index) {
