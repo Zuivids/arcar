@@ -2,11 +2,12 @@ import { Component, inject } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
 import { LanguageService } from '../../services/language.service';
 import { PriceCardComponent, PriceCardOffer, PriceCardTitleLine } from '../price-card/price-card.component';
+import { TireCardComponent } from '../tire-card/tire-card.component';
 
 @Component({
   selector: 'app-hero',
   standalone: true,
-  imports: [TranslateModule, PriceCardComponent],
+  imports: [TranslateModule, PriceCardComponent, TireCardComponent],
   templateUrl: './hero.component.html',
   styleUrl: './hero.component.scss',
 })

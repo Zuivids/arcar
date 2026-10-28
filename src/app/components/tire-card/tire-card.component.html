@@ -1,0 +1,85 @@
+<section class="tc">
+  <div class="tc-body">
+    <!-- Tire fitting price list -->
+    <div class="tc-main">
+      <header class="tc-header">
+        <h2 class="tc-title">
+          <span class="tc-title-line accent">{{ 'tires.title_1' | translate }}</span>
+          <span class="tc-title-line">{{ 'tires.title_2' | translate }}</span>
+        </h2>
+        <p class="tc-subtitle">
+          @for (key of subtitleKeys; track key; let last = $last) {
+            {{ key | translate }}
+            @if (!last) {
+              <span class="tc-subtitle-dot">•</span>
+            }
+          }
+        </p>
+      </header>
+
+      <div class="tc-table">
+        <div class="tc-head">
+          <div class="tc-head-size">
+            <span class="material-symbols-rounded">settings</span>
+            <span>{{ 'tires.col_size' | translate }}</span>
+          </div>
+          <div class="tc-head-col">
+            <span class="material-symbols-rounded">construction</span>
+            <span>
+              <strong>{{ 'tires.col_service' | translate }}</strong>
+              <small>{{ 'tires.col_set' | translate }}</small>
+            </span>
+          </div>
+          <div class="tc-head-col">
+            <span class="material-symbols-rounded">tire_repair</span>
+            <span>
+              <strong>{{ 'tires.col_service' | translate }}</strong>
+              <small>{{ 'tires.col_single' | translate }}</small>
+            </span>
+          </div>
+        </div>
+
+        <ul class="tc-rows">
+          @for (row of rows; track row.size) {
+            <li class="tc-row">
+              <span class="tc-size">{{ row.size }}</span>
+              <span class="tc-price">{{ row.set }} <small>EUR</small></span>
+              <span class="tc-price tc-price-pair">
+                <span>{{ row.single }} <small>EUR</small></span>
+                <span class="tc-slash">/</span>
+                <span>{{ row.pair }} <small>EUR</small></span>
+              </span>
+            </li>
+          }
+        </ul>
+      </div>
+    </div>
+
+    <!-- DPF test offer with a tire change -->
+    <aside class="tc-promo">
+      <p class="tc-promo-band">{{ 'tires.promo_band' | translate }}</p>
+      <h3 class="tc-promo-title">
+        <span>{{ 'tires.promo_title_1' | translate }}</span>
+        <span class="big">{{ 'tires.promo_title_2' | translate }}</span>
+      </h3>
+      <p class="tc-promo-desc">
+        <span class="material-symbols-rounded">check_circle</span>
+        {{ 'dpf.o1_desc' | translate }}
+      </p>
+      <div class="tc-promo-price">
+        <span class="tc-promo-only">{{ 'tires.promo_only' | translate }}</span>
+        <span class="tc-promo-amount">20.00 <small>EUR</small></span>
+      </div>
+    </aside>
+  </div>
+
+  <!-- Perks bar -->
+  <ul class="tc-perks">
+    @for (perk of perks; track perk.key) {
+      <li class="tc-perk">
+        <span class="material-symbols-rounded">{{ perk.icon }}</span>
+        {{ perk.key | translate }}
+      </li>
+    }
+  </ul>
+</section>

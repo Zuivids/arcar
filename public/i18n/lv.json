@@ -37,6 +37,21 @@
     "perk2": "Kvalitatīva uzstādīšana",
     "perk3": "Videi draudzīgāks auto"
   },
+  "tires": {
+    "title_1": "Riepu",
+    "title_2": "Montāža",
+    "sub_1": "Montāža",
+    "sub_2": "Balansēšana",
+    "sub_3": "Profesionāls aprīkojums",
+    "col_size": "Disku izmērs",
+    "col_service": "Montāža + balansēšana",
+    "col_set": "Komplekts (4 gab.)",
+    "col_single": "Pa 1 gab. / 2 gab.",
+    "promo_band": "Veicot riepu maiņu",
+    "promo_title_1": "DPF kvēpu filtra",
+    "promo_title_2": "Tests",
+    "promo_only": "Tikai"
+  },
   "hero": {
     "tagline": "PREMIUM AUTO SERVISS",
     "title_1": "Profesionāls auto serviss",

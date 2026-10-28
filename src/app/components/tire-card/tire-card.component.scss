@@ -1,0 +1,341 @@
+:host { display: block; }
+
+.tc {
+  display: flex;
+  flex-direction: column;
+  background:
+    radial-gradient(ellipse at 85% 0%, rgba(255, 107, 0, 0.18) 0%, transparent 55%),
+    var(--bg-card);
+}
+
+// Price list left, DPF offer right
+.tc-body {
+  display: grid;
+  grid-template-columns: minmax(0, 1.7fr) minmax(0, 1fr);
+  gap: 24px;
+  padding: 28px 24px 24px;
+}
+
+// ─── Header ──────────────────────────────────────
+.tc-header { margin-bottom: 18px; }
+
+.tc-title {
+  display: flex;
+  flex-direction: column;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  line-height: 0.9;
+  text-transform: uppercase;
+}
+
+.tc-title-line {
+  font-size: 72px;
+  letter-spacing: 0.02em;
+  color: var(--color-primary);
+
+  &.accent { color: var(--accent); }
+}
+
+.tc-subtitle {
+  display: inline-block;
+  margin-top: 10px;
+  padding-top: 8px;
+  border-top: 2px solid var(--accent);
+  font-family: var(--font-heading);
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: var(--color-primary);
+  text-transform: uppercase;
+}
+
+.tc-subtitle-dot {
+  margin: 0 6px;
+  color: var(--accent);
+}
+
+// ─── Table ───────────────────────────────────────
+.tc-head,
+.tc-row {
+  display: grid;
+  grid-template-columns: 22% minmax(0, 1fr) minmax(0, 1.3fr);
+}
+
+.tc-head {
+  margin-bottom: 8px;
+  border: 1px solid var(--border-accent);
+  border-radius: var(--radius-sm);
+  background: rgba(0, 0, 0, 0.55);
+  overflow: hidden;
+}
+
+.tc-head-size,
+.tc-head-col {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 12px;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+
+.tc-head-size {
+  justify-content: center;
+  background: var(--accent);
+  color: #fff;
+  font-size: 15px;
+
+  .material-symbols-rounded { font-size: 30px; }
+}
+
+.tc-head-col {
+  justify-content: center;
+
+  & + & { border-left: 1px solid var(--border); }
+
+  .material-symbols-rounded {
+    font-size: 30px;
+    color: var(--color-primary);
+  }
+
+  strong {
+    display: block;
+    font-size: 16px;
+    color: var(--accent);
+  }
+
+  small {
+    display: block;
+    font-size: 11.5px;
+    font-weight: 600;
+    color: var(--color-secondary);
+  }
+}
+
+.tc-rows {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  list-style: none;
+}
+
+.tc-row {
+  align-items: stretch;
+  border: 1px solid var(--border-accent);
+  border-radius: var(--radius-sm);
+  background: rgba(0, 0, 0, 0.55);
+  overflow: hidden;
+  transition: transform var(--transition), border-color var(--transition), box-shadow var(--transition);
+
+  &:hover {
+    transform: scale(1.02);
+    border-color: var(--accent);
+    box-shadow: 0 8px 24px rgba(255, 107, 0, 0.2);
+  }
+}
+
+.tc-size {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 8px;
+  background: var(--accent);
+  font-family: var(--font-heading);
+  font-size: 20px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.tc-price {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 10px;
+  font-family: var(--font-heading);
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1.1;
+  color: var(--accent);
+  white-space: nowrap;
+
+  & + & { border-left: 1px solid var(--border); }
+
+  small {
+    font-size: 13px;
+    color: var(--color-primary);
+  }
+}
+
+.tc-price-pair {
+  flex-wrap: wrap;
+  gap: 0 8px;
+}
+
+.tc-slash { color: var(--color-primary); }
+
+// ─── DPF offer ───────────────────────────────────
+.tc-promo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 16px;
+  padding: 24px 20px;
+  border: 1px solid var(--border-accent);
+  border-radius: var(--radius-md);
+  background:
+    radial-gradient(ellipse at 100% 100%, rgba(255, 107, 0, 0.22) 0%, transparent 60%),
+    rgba(0, 0, 0, 0.5);
+}
+
+.tc-promo-band {
+  align-self: flex-start;
+  padding: 6px 14px;
+  border-radius: var(--radius-sm);
+  background: var(--accent);
+  font-family: var(--font-heading);
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1.1;
+  color: #000;
+  text-transform: uppercase;
+}
+
+.tc-promo-title {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 12px;
+  border-bottom: 2px solid var(--accent);
+  font-family: var(--font-heading);
+  font-size: 34px;
+  font-weight: 700;
+  line-height: 0.95;
+  color: var(--color-primary);
+  text-transform: uppercase;
+
+  .big {
+    font-size: 72px;
+    letter-spacing: 0.02em;
+  }
+}
+
+.tc-promo-desc {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 12.5px;
+  line-height: 1.4;
+  color: var(--color-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+
+  .material-symbols-rounded {
+    font-size: 30px;
+    color: #22c55e;
+  }
+}
+
+.tc-promo-price {
+  display: flex;
+  flex-direction: column;
+  align-self: flex-start;
+  padding: 10px 20px;
+  border-radius: var(--radius-sm);
+  background: var(--accent);
+  font-family: var(--font-heading);
+  font-weight: 700;
+  line-height: 1;
+  color: #000;
+  text-transform: uppercase;
+  transition: transform var(--transition), box-shadow var(--transition);
+
+  &:hover {
+    transform: scale(1.04);
+    box-shadow: 0 8px 24px rgba(255, 107, 0, 0.35);
+  }
+}
+
+.tc-promo-only { font-size: 24px; }
+
+.tc-promo-amount {
+  font-size: 56px;
+  white-space: nowrap;
+
+  small { font-size: 22px; }
+}
+
+// ─── Perks bar ───────────────────────────────────
+.tc-perks {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  list-style: none;
+  padding: 14px 24px;
+  border-top: 1px solid var(--border);
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.tc-perk {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: 12px;
+  letter-spacing: 0.03em;
+  color: var(--color-secondary);
+  text-transform: uppercase;
+
+  & + & { border-left: 1px solid var(--accent); }
+
+  .material-symbols-rounded {
+    font-size: 30px;
+    color: var(--accent);
+  }
+}
+
+// ─── Smaller screens ─────────────────────────────
+// Stacked: DPF offer moves under the price list
+@media (max-width: 1185px) {
+  .tc-body { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 600px) {
+  .tc-body { padding: 22px 16px 16px; }
+
+  .tc-title-line { font-size: 56px; }
+  .tc-subtitle   { font-size: 12px; }
+
+  .tc-head-size,
+  .tc-head-col {
+    flex-direction: column;
+    gap: 2px;
+    padding: 8px 6px;
+    text-align: center;
+
+    .material-symbols-rounded { font-size: 22px; }
+  }
+
+  .tc-head-size { font-size: 12px; }
+  .tc-head-col strong { font-size: 13px; }
+  .tc-head-col small  { font-size: 10px; }
+
+  .tc-size  { font-size: 17px; }
+  .tc-price { font-size: 18px; padding: 6px; }
+  .tc-price small { font-size: 11px; }
+
+  .tc-promo-title      { font-size: 28px; }
+  .tc-promo-title .big { font-size: 56px; }
+  .tc-promo-amount     { font-size: 46px; }
+
+  .tc-perks { padding: 12px 8px; }
+
+  .tc-perk {
+    flex-direction: column;
+    gap: 4px;
+    padding: 0 6px;
+    font-size: 10px;
+    text-align: center;
+
+    .material-symbols-rounded { font-size: 24px; }
+  }
+}
