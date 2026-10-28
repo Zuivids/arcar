@@ -14,6 +14,7 @@
     "contact": "Kontakti",
     "book": "Pieteikt Servisu",
     "route_ac": "Kondicionieru uzpilde",
+    "route_dpf": "DPF pakalpojumi",
     "route_alignment": "Riteņu savirze",
     "route_ta": "TA sagatavošana",
     "route_sale": "Auto pārdošana",
@@ -205,6 +206,14 @@
     "cta_desc": "Brauciet ar aukstu un komfortablu salonu. Ātra pierakstīšanās — bez rinām."
   },
   "pages": {
+    "dpf": {
+      "badge": "DPF kvēpu filtru speciālisti",
+      "title": "DPF pakalpojumi",
+      "sub": "DPF filtru pārbaude, restaurācija un lietotu filtru uzstādīšana Rīgā.",
+      "intro": "Aizsērējis DPF kvēpu filtrs samazina dzinēja jaudu, palielina degvielas patēriņu un var neļaut iziet tehnisko apskati. Ar specializētu mēriekārtu pārbaudām izplūdes gāzu cieto daļiņu daudzumu, novērtējam filtra stāvokli un piedāvājam labāko risinājumu - restaurāciju vai lietotu filtru ar garantiju.",
+      "cta_title": "Piesakies DPF pārbaudei",
+      "cta_desc": "Sazinies ar mums un rezervē ērtāko laiku vizītei."
+    },
     "alignment": {
       "badge": "Precīza riteņu ģeometrija",
       "title": "Riteņu savirze",

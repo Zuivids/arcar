@@ -14,6 +14,13 @@ export const routes: Routes = [
       ),
   },
   {
+    path: 'dpf-pakalpojumi-riga',
+    loadComponent: () =>
+      import('./pages/dpf-pakalpojumi-riga/dpf-pakalpojumi-riga.component').then(
+        m => m.DpfPakalpojumiRigaComponent
+      ),
+  },
+  {
     path: 'ritenu-savirze-riga',
     loadComponent: () =>
       import('./pages/ritenu-savirze-riga/ritenu-savirze-riga.component').then(

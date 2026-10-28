@@ -1,0 +1,42 @@
+<!-- ╔══ HERO ══╗ -->
+<section class="simple-hero">
+  <div class="container simple-hero-inner">
+    <div class="simple-badge">
+      <span class="material-symbols-rounded">verified_user</span>
+      {{ 'pages.dpf.badge' | translate }}
+    </div>
+    <h1 class="simple-title">{{ 'pages.dpf.title' | translate }}</h1>
+    <p class="simple-sub">{{ 'pages.dpf.sub' | translate }}</p>
+    <div class="simple-actions">
+      <a routerLink="/" fragment="contact" class="btn-primary">
+        <span class="material-symbols-rounded">event_available</span>
+        {{ 'common.book' | translate }}
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ╔══ INTRO + PRICE LIST ══╗ -->
+<section class="simple-intro">
+  <div class="container">
+    <p class="simple-intro-text">{{ 'pages.dpf.intro' | translate }}</p>
+
+    <div class="dpf-pricelist">
+      <app-price-card [titleLines]="dpfTitle" [subtitleKeys]="dpfSubtitle" [offers]="dpfOffers" [showFooter]="true" />
+    </div>
+  </div>
+</section>
+
+<!-- ╔══ CTA ══╗ -->
+<section class="simple-cta">
+  <div class="container">
+    <div class="simple-cta-inner">
+      <h2 class="simple-cta-title">{{ 'pages.dpf.cta_title' | translate }}</h2>
+      <p class="simple-cta-desc">{{ 'pages.dpf.cta_desc' | translate }}</p>
+      <a routerLink="/" fragment="contact" class="btn-primary">
+        <span class="material-symbols-rounded">event_available</span>
+        {{ 'common.book' | translate }}
+      </a>
+    </div>
+  </div>
+</section>
