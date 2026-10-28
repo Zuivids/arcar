@@ -23,6 +23,7 @@ $transition:   var(--transition);
 // ─── HERO ───────────────────────────────────────────────────
 .ku-hero {
   min-height: 100vh;
+  min-height: 100svh; // phones: stays put when the address bar hides
   display: flex;
   align-items: center;
   padding: calc(var(--nav-height) + var(--nav-secondary-height) + 48px) 0 80px;

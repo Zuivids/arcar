@@ -163,6 +163,7 @@
   & + & { border-left: 1px solid var(--border); }
 
   small {
+    margin-left: 4px; // flex drops the space before "EUR"
     font-size: 13px;
     color: var(--color-primary);
   }

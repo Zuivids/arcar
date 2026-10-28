@@ -17,6 +17,8 @@
   border-radius: 50%;
   filter: blur(100px);
 
+  @media (max-width: 768px) { filter: none; }
+
   &--left {
     left: -150px;
     top: 20%;

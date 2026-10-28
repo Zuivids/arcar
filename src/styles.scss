@@ -231,6 +231,12 @@ section[id] {
   -webkit-backdrop-filter: blur(10px);
   transition: all var(--transition);
 
+  // Phones: blur behind many cards is slow to scroll and barely visible on the dark page
+  @media (max-width: 768px) {
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+  }
+
   &:hover {
     background: var(--bg-glass-hover);
     border-color: var(--border-accent);
@@ -423,3 +429,16 @@ section[id] {
   line-height: 1.6;
 }
 
+
+// ─── Reduced motion ──────────────────────────────
+// Phone/OS setting "reduce motion": stop looping background animations
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-iteration-count: 1 !important;
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
