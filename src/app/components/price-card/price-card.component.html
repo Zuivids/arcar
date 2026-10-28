@@ -1,0 +1,77 @@
+<section class="pc">
+  <!-- Header -->
+  <header class="pc-header">
+    <h2 class="pc-title">
+      @for (line of titleLines; track line.key) {
+        <span class="pc-title-line" [class.accent]="line.accent" [class.big]="line.big">
+          {{ line.key | translate }}
+        </span>
+      }
+    </h2>
+    <p class="pc-subtitle">
+      @for (key of subtitleKeys; track key; let last = $last) {
+        {{ key | translate }}
+        @if (!last) {
+          <span class="pc-subtitle-dot">•</span>
+        }
+      }
+    </p>
+  </header>
+
+  <!-- Offers -->
+  <ul class="pc-offers">
+    @for (offer of offers; track offer.titleKey) {
+      <li class="pc-offer">
+        <div class="pc-offer-icon">
+          <span class="material-symbols-rounded">{{ offer.icon }}</span>
+        </div>
+        <div class="pc-offer-text">
+          <h3 class="pc-offer-title" [class.plain-case]="!uppercaseTitles">{{ offer.titleKey | translate }}</h3>
+          @if (offer.descKey) {
+            <p class="pc-offer-desc">{{ offer.descKey | translate }}</p>
+          }
+        </div>
+        <div class="pc-offer-price">
+          @if (offer.priceLabelKey) {
+            <span class="pc-price-label">{{ offer.priceLabelKey | translate }}</span>
+          }
+          <span class="pc-price">
+            {{ offer.price }} <small>EUR</small>
+            @if (offer.unitKey) {
+              <small class="pc-price-unit">{{ offer.unitKey | translate }}</small>
+            }
+          </span>
+          @if (offer.noteKey) {
+            <span class="pc-price-note">{{ offer.noteKey | translate }}</span>
+          }
+        </div>
+      </li>
+    }
+  </ul>
+
+  <!-- Footer bar -->
+  @if (showFooter) {
+    <div class="pc-footer">
+      <div class="pc-contacts">
+        <a class="pc-contact" href="https://maps.app.goo.gl/rTzZPF3vBTV1TyzN8" target="_blank" rel="noopener noreferrer">
+          <span class="material-symbols-rounded">location_on</span>
+          Sila iela 1A, Rīga
+        </a>
+        <a class="pc-contact" href="tel:+37126800753">
+          <span class="material-symbols-rounded">call</span>
+          +37126800753
+        </a>
+      </div>
+      <ul class="pc-perks">
+        @for (perk of perks; track perk.key) {
+          <li class="pc-perk">
+            <span class="material-symbols-rounded">{{ perk.icon }}</span>
+            {{ perk.key | translate }}
+          </li>
+        }
+      </ul>
+    </div>
+  } @else {
+    <div class="pc-bottom-space"></div>
+  }
+</section>

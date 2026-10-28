@@ -116,60 +116,46 @@
   position: relative;
   z-index: 1;
   display: grid;
-  grid-template-columns: minmax(320px, 1fr) minmax(380px, 620px);
   align-items: center;
-  gap: 80px;
   padding-top: calc(var(--nav-height) + var(--nav-secondary-height) + 36px);
   padding-bottom: 80px;
   min-height: 100vh;
 
-  @media (max-width: 1185px) {
-    grid-template-columns: 1fr;
-    gap: 60px;
+  // Wide screens: smaller side margins, more room for the price cards
+  @media (min-width: 1345px) {
+    max-width: 1600px;
+    padding-left: 32px;
+    padding-right: 32px;
   }
 }
 
-// ─── Text Block ──────────────────────────────────
-.hero-text {
-  max-width: 620px;
-}
-
-.hero-custom-title {
-  font-family: var(--font-heading);
-  font-size: clamp(44px, 6.6vw, 82px);
-  line-height: 0.98;
-  letter-spacing: -0.03em;
-  color: var(--color-primary);
-  margin-bottom: 26px;
-  animation: fadeUp 0.8s ease 0.3s both;
-}
-
+// Price cards: side by side on desktop, stacked below that
 .hero-pricelist {
   width: 100%;
-  max-width: 620px;
-  justify-self: end;
-  display: flex;
-  flex-direction: column;
+  justify-self: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: stretch; // side by side: both cards as tall as the taller one
   gap: 20px;
   animation: fadeUp 0.8s ease 0.3s both;
 
   @media (max-width: 1185px) {
-    justify-self: start;
+    grid-template-columns: 1fr;
+    width: 75%;
+  }
+
+  @media (max-width: 600px) {
+    width: 100%;
   }
 }
 
 .hero-pricelist-item {
+  display: flex;
+  flex-direction: column;
   border-radius: var(--radius-md);
   overflow: hidden;
   border: 1px solid var(--border);
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.45);
-
-  img {
-    display: block;
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-  }
 }
 
 .hero-tagline {
@@ -230,25 +216,6 @@
   margin-bottom: 44px;
   font-weight: 300;
   animation: fadeUp 0.8s ease 0.8s both;
-}
-
-// ─── CTA Buttons ─────────────────────────────────
-.hero-actions {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  margin-bottom: 0;
-  animation: fadeUp 0.8s ease 1.0s both;
-
-  @media (max-width: 500px) {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-}
-
-.hero-btn {
-  font-size: 14px;
-  padding: 15px 32px;
 }
 
 // ─── Badge Row ───────────────────────────────────

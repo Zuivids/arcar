@@ -14,27 +14,12 @@
 
   <!-- Content -->
   <div class="hero-content container">
-    <div class="hero-text">
-      <h1 class="hero-custom-title">{{ 'hero.custom_title' | translate }}</h1>
-
-      <!-- CTAs -->
-      <div class="hero-actions">
-        <button class="btn-primary hero-btn" (click)="scrollTo('contact')">
-          <span>{{ 'hero.cta_primary' | translate }}</span>
-          <span class="material-symbols-rounded">arrow_forward</span>
-        </button>
-        <button class="btn-secondary hero-btn" (click)="scrollTo('services')">
-          {{ 'hero.cta_secondary' | translate }}
-        </button>
-      </div>
-    </div>
-
     <div class="hero-pricelist">
       <div class="hero-pricelist-item">
-        <img src="/dpf_pakalpojumi.jpeg" alt="ARCAR DPF pakalpojumi" />
+        <app-price-card [titleLines]="dpfTitle" [subtitleKeys]="dpfSubtitle" [offers]="dpfOffers" [showFooter]="true" />
       </div>
       <div class="hero-pricelist-item">
-        <img src="/pricelist.jpeg" alt="ARCAR price list" />
+        <app-price-card [titleLines]="acTitle" [subtitleKeys]="acSubtitle" [offers]="acOffers" [uppercaseTitles]="false" />
       </div>
     </div>
   </div>
