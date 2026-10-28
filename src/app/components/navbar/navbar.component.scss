@@ -89,17 +89,6 @@
     flex-wrap: wrap;
   }
 
-  @media (max-width: 460px) {
-    flex-wrap: nowrap;
-    gap: 12px;
-    padding: 5px 16px;
-
-    // Hide hours, address and email — keep only the phone number
-    .nav-info-item { display: none; }
-    .nav-info-address { display: none; }
-    a[href^="mailto"] { display: none; }
-  }
-
   a {
     display: inline-flex;
     align-items: center;
@@ -133,6 +122,9 @@
     font-size: 12px;
     white-space: nowrap;
 
+    // Very narrow phones: not enough room for the hours too
+    @media (max-width: 360px) { display: none; }
+
     svg {
       width: 14px;
       height: 14px;
@@ -140,6 +132,17 @@
       opacity: 0.9;
       flex-shrink: 0;
     }
+  }
+
+  // Phones: hours, address and phone on one line, email hidden
+  // (after the item rules above so these sizes win)
+  @media (max-width: 460px) {
+    flex-wrap: nowrap;
+    gap: 10px;
+    padding: 5px 16px;
+
+    a, .nav-info-item { font-size: 11px; gap: 5px; }
+    a[href^="mailto"] { display: none; }
   }
 }
 
