@@ -28,6 +28,13 @@ export const routes: Routes = [
       ),
   },
   {
+    path: 'lukturu-regulesana-riga',
+    loadComponent: () =>
+      import('./pages/lukturu-regulesana-riga/lukturu-regulesana-riga.component').then(
+        m => m.LukturuRegulesanaRigaComponent
+      ),
+  },
+  {
     path: 'ta-sagatavosana-riga',
     loadComponent: () =>
       import('./pages/ta-sagatavosana-riga/ta-sagatavosana-riga.component').then(

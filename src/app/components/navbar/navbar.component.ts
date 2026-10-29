@@ -29,6 +29,7 @@ export class NavbarComponent {
   // Line 2 — dedicated service pages (own routes, not home-page anchors)
   routeLinks = [
     { key: 'nav.route_dpf',       path: '/dpf-pakalpojumi-riga' },
+    { key: 'nav.route_headlights', path: '/lukturu-regulesana-riga' },
     { key: 'nav.route_ac',        path: '/kondicionieru-uzpilde-riga' },
     { key: 'nav.route_alignment', path: '/ritenu-savirze-riga' },
     { key: 'nav.route_ta',        path: '/ta-sagatavosana-riga' },

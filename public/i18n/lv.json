@@ -16,6 +16,7 @@
     "route_ac": "Kondicionieru uzpilde",
     "route_dpf": "DPF pakalpojumi",
     "route_alignment": "Riteņu savirze",
+    "route_headlights": "Automašīnas lukturu regulēšana",
     "route_ta": "TA sagatavošana",
     "route_sale": "Auto pārdošana",
     "route_us_parts": "ASV auto detaļas",
@@ -206,6 +207,20 @@
     "cta_desc": "Brauciet ar aukstu un komfortablu salonu. Ātra pierakstīšanās — bez rinām."
   },
   "pages": {
+    "headlights": {
+      "badge": "Specializēts aprīkojums",
+      "title": "Automašīnas lukturu regulēšana",
+      "sub": "Ātri, precīzi un par pieejamu cenu!",
+      "intro": "Piedāvājam profesionālu automašīnas priekšējo lukturu pārbaudi un regulēšanu ar specializētu aprīkojumu. Pareizi noregulēti lukturi nodrošina labāku ceļa redzamību diennakts tumšajā laikā, neapžilbina pretimbraucošos un palīdz veiksmīgi iziet tehnisko apskati.",
+      "f1_title": "Precīza pārbaude",
+      "f1_desc": "Lukturu gaismas kūļa pārbaude un regulēšana ar specializētu aprīkojumu.",
+      "f2_title": "Labāka redzamība",
+      "f2_desc": "Droša braukšana tumsā, neapžilbinot pretimbraucošos.",
+      "f3_title": "Gatavs tehniskajai apskatei",
+      "f3_desc": "Pareizi noregulēti lukturi palīdz veiksmīgi iziet tehnisko apskati.",
+      "cta_title": "Piesakies lukturu regulēšanai",
+      "cta_desc": "Sazinies ar mums un rezervē ērtāko laiku vizītei."
+    },
     "dpf": {
       "badge": "DPF kvēpu filtru speciālisti",
       "title": "DPF pakalpojumi",
