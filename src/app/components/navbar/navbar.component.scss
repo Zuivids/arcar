@@ -332,7 +332,7 @@
   display: none;
   flex-direction: column;
   gap: 0;
-  background: rgba(5, 5, 5, 0.97); // nearly opaque, so no backdrop blur needed
+  background: #050505; // solid: page text must not show through the links
   padding: 0;
   max-height: 0;
   overflow: hidden;
@@ -345,7 +345,11 @@
 
   &.open {
     border-top: 1px solid var(--border);
-    max-height: 600px;
+    // Fill the screen below the bars; scroll inside the menu when the links don't fit
+    max-height: calc(100vh - 94px);
+    max-height: calc(100svh - 94px);
+    overflow-y: auto;
+    overscroll-behavior: contain;
     opacity: 1;
     visibility: visible;
     transition:
